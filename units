@@ -1717,7 +1717,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"300"
+		"StatusHealth"	"270"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -1821,7 +1821,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"400"
+		"StatusHealth"	"350"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -2963,7 +2963,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"6000"
+		"StatusHealth"	"5500"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -3067,7 +3067,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"9000"
+		"StatusHealth"	"10000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -3379,7 +3379,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"13000"
+		"StatusHealth"	"15000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -3587,7 +3587,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"4000"
+		"StatusHealth"	"4500"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -3691,7 +3691,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"3000"
+		"StatusHealth"	"3500"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -3795,7 +3795,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"7700"
+		"StatusHealth"	"8000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -4107,7 +4107,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"3800"
+		"StatusHealth"	"4000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -4731,7 +4731,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"14000"
+		"StatusHealth"	"16000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -4835,7 +4835,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"21000"
+		"StatusHealth"	"22000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -6707,7 +6707,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"130000"
+		"StatusHealth"	"150000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -6811,7 +6811,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"180000"
+		"StatusHealth"	"200000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -8766,6 +8766,7 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creature"
 		// Model.
+		// "Model"	"models/pumpkin.vmdl"
 		"Model"	"materials/new_stone.vmdl"
 		// Model.
 		// "Model"	"models/particle/snowball.vmdl"
@@ -8907,15 +8908,14 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creature"
 		// Model.
-		"Model"	"models/props_tree/tree_oak_00.vmdl"
-		// Model.
-		// "Model"	"models/particle/snowball.vmdl"
+		// "Model"	"models/props_tree/tree_oak_00.vmdl"
+		"Model"	"models/items/furion/treant/hallowed_horde/hallowed_horde.vmdl"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
 		"Level"	"0"
-		"ModelScale"	"1.2"
+		"ModelScale"	"1.3"
 		// Abilities
 		// ----------------------------------------------------------------
 		// Ability 1.
@@ -15557,9 +15557,9 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"30"
+		"AttackDamageMin"	"40"
 		// Damage range max.
-		"AttackDamageMax"	"30"
+		"AttackDamageMax"	"40"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"1"
@@ -15686,9 +15686,9 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"100"
+		"AttackDamageMin"	"140"
 		// Damage range max.
-		"AttackDamageMax"	"100"
+		"AttackDamageMax"	"140"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"0.8"
@@ -16329,9 +16329,9 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"10"
+		"AttackDamageMin"	"30"
 		// Damage range max.
-		"AttackDamageMax"	"10"
+		"AttackDamageMax"	"30"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"0.5"
@@ -16974,9 +16974,9 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"170"
+		"AttackDamageMin"	"80"
 		// Damage range max.
-		"AttackDamageMax"	"170"
+		"AttackDamageMax"	"80"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"0.5"
@@ -17049,7 +17049,7 @@
 		"VisionDaytimeRange"	"900"
 		// Range of vision at night time.
 		"VisionNighttimeRange"	"600"
-		"Ability9"	""
+		"Ability9"	"tower_attack4"
 		"Ability10"	""
 		"Ability11"	""
 		"Ability12"	""
@@ -18008,9 +18008,9 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"60"
+		"AttackDamageMin"	"100"
 		// Damage range max.
-		"AttackDamageMax"	"60"
+		"AttackDamageMax"	"100"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"0.8"
@@ -18137,9 +18137,9 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"100"
+		"AttackDamageMin"	"40"
 		// Damage range max.
-		"AttackDamageMax"	"100"
+		"AttackDamageMax"	"40"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"0.8"
@@ -18212,7 +18212,7 @@
 		"VisionDaytimeRange"	"900"
 		// Range of vision at night time.
 		"VisionNighttimeRange"	"600"
-		"Ability9"	""
+		"Ability9"	"tower_attack4"
 		"Ability10"	""
 		"Ability11"	""
 		"Ability12"	""
@@ -18266,12 +18266,12 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"30"
+		"AttackDamageMin"	"50"
 		// Damage range max.
-		"AttackDamageMax"	"30"
+		"AttackDamageMax"	"50"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
-		"AttackRate"	"0.8"
+		"AttackRate"	"0.75"
 		// Normalized time in animation cycle to attack.
 		"AttackAnimationPoint"	"0"
 		// Range within a target can be acquired.
@@ -18395,12 +18395,12 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"160"
+		"AttackDamageMin"	"240"
 		// Damage range max.
-		"AttackDamageMax"	"160"
+		"AttackDamageMax"	"240"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
-		"AttackRate"	"0.7"
+		"AttackRate"	"0.75"
 		// Normalized time in animation cycle to attack.
 		"AttackAnimationPoint"	"0"
 		// Range within a target can be acquired.
@@ -18911,9 +18911,9 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"40"
+		"AttackDamageMin"	"100"
 		// Damage range max.
-		"AttackDamageMax"	"40"
+		"AttackDamageMax"	"100"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"0.7"
@@ -19689,9 +19689,9 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"30"
+		"AttackDamageMin"	"100"
 		// Damage range max.
-		"AttackDamageMax"	"30"
+		"AttackDamageMax"	"100"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"0.5"
@@ -20208,18 +20208,18 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"42"
+		"AttackDamageMin"	"120"
 		// Damage range max.
-		"AttackDamageMax"	"42"
+		"AttackDamageMax"	"120"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"1"
 		// Normalized time in animation cycle to attack.
 		"AttackAnimationPoint"	"0"
 		// Range within a target can be acquired.
-		"AttackAcquisitionRange"	"1200"
+		"AttackAcquisitionRange"	"1600"
 		// Range within a target can be attacked.
-		"AttackRange"	"800"
+		"AttackRange"	"1200"
 		"ProjectileModel"	"particles/items2_fx/skadi_projectile.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
@@ -20339,9 +20339,9 @@
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"120"
+		"AttackDamageMin"	"40"
 		// Damage range max.
-		"AttackDamageMax"	"120"
+		"AttackDamageMax"	"40"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"0.5"
@@ -20414,7 +20414,7 @@
 		"VisionDaytimeRange"	"900"
 		// Range of vision at night time.
 		"VisionNighttimeRange"	"600"
-		"Ability9"	""
+		"Ability9"	"tower_attack4"
 		"Ability10"	""
 		"Ability11"	""
 		"Ability12"	""
@@ -21457,7 +21457,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/youbushiban.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -21589,7 +21589,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/hongliushiban.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -21721,7 +21721,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/zhangqishiban.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -21853,7 +21853,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/zuzhoushiban.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -21985,7 +21985,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/suanwushiban.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -22117,7 +22117,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/mabishiban.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -22249,7 +22249,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/kongheshiban.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -22381,7 +22381,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/xuwushiban.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -22513,7 +22513,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/youbushiban_yin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -22645,7 +22645,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/hongliushiban_yin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -22777,7 +22777,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/zhangqishiban_yin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -22909,7 +22909,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/zuzhoushiban_yin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -23041,7 +23041,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/suanwushiban_yin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -23173,7 +23173,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/mabishiban_yin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -23305,7 +23305,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/kongheshiban_yin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -23437,7 +23437,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/xuwushiban_yin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -23569,7 +23569,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/youbushiban_jin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -23701,7 +23701,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/hongliushiban_jin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -23833,7 +23833,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/zhangqishiban_jin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -23965,7 +23965,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/zuzhoushiban_jin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -24097,7 +24097,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/suanwushiban_jin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -24229,7 +24229,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/mabishiban_jin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -24360,8 +24360,8 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creature"
 		// Model.
-		"Model"	"materials/mabishiban_jin.vmdl"
-		"ModelScale"	"0.7"
+		"Model"	"materials/kongheshiban_jin.vmdl"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -24493,7 +24493,7 @@
 		"BaseClass"	"npc_dota_creature"
 		// Model.
 		"Model"	"materials/xuwushiban_jin.vmdl"
-		"ModelScale"	"0.7"
+		"ModelScale"	"0.65"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -24612,5 +24612,132 @@
 		"Ability15"	""
 		"Ability16"	""
 		"AutoAttacksByDefault"	"0"
+	}
+
+	"gemtd_yinhun"
+	{
+		// General
+		//
+		// Class of entity of link to.
+		"BaseClass"	"npc_dota_creature"
+		"Model"	"models/items/death_prophet/hecate_ghosts/hecate_ghosts.vmdl"
+		"ModelScale"	"1.5"
+		// Name of sound set.
+		"SoundSet"	"Hero_Lina"
+		"MinimapIcon"	"minimap_creep"
+		"MinimapIconSize"	"256"
+		"Level"	"1"
+		// Abilities
+		// ----------------------------------------------------------------
+		// Ability 1.
+		"Ability1"	"wudi"
+		// Ability 2.
+		"Ability2"	"no_hp_bar"
+		// Ability 3.
+		"Ability3"	"no_selectable"
+		// Ability 4.
+		"Ability4"	"ss_shackles"
+		// Ability 5.
+		"Ability5"	""
+		// Ability 6 - Extra.
+		"Ability6"	""
+		// Ability 7 - Extra.
+		"Ability7"	""
+		// Ability 8 - Extra.
+		"Ability8"	""
+		// Armor
+		// ----------------------------------------------------------------
+		// Physical protection.
+		"ArmorPhysical"	"0"
+		// Magical protection.
+		"MagicalResistance"	"10"
+		// Attack
+		// ----------------------------------------------------------------
+		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
+		// Damage range min.
+		"AttackDamageMin"	"150"
+		// Damage range max.
+		"AttackDamageMax"	"150"
+		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
+		// Speed of attack.
+		"AttackRate"	"0.5"
+		// Normalized time in animation cycle to attack.
+		"AttackAnimationPoint"	"0"
+		// Range within a target can be acquired.
+		"AttackAcquisitionRange"	"1500"
+		// Range within a target can be attacked.
+		"AttackRange"	"700"
+		"ProjectileModel"	"particles/units/heroes/hero_visage/visage_base_attack.vpcf"
+		// Speed of projectile.
+		"ProjectileSpeed"	"3000"
+		// Attributes
+		// ----------------------------------------------------------------
+		"AttributePrimary"	"DOTA_ATTRIBUTE_STRENGTH"
+		// Base strength
+		"AttributeBaseStrength"	"0"
+		// Strength bonus per level.
+		"AttributeStrengthGain"	"0"
+		// Base intelligence
+		"AttributeBaseIntelligence"	"0"
+		// Intelligence bonus per level.
+		"AttributeIntelligenceGain"	"0"
+		// Base agility
+		"AttributeBaseAgility"	"0"
+		// Agility bonus per level.
+		"AttributeAgilityGain"	"0"
+		// Bounty
+		// ----------------------------------------------------------------
+		// Experience earn.
+		"BountyXP"	"25"
+		// Gold earned min.
+		"BountyGoldMin"	"102"
+		// Gold earned max.
+		"BountyGoldMax"	"120"
+		// Bounds
+		// ----------------------------------------------------------------
+		// Hull type used for navigation/locomotion.
+		"BoundsHullName"	"DOTA_HULL_SIZE_FILLER"
+		"RingRadius"	"80"
+		"HealthBarOffset"	"260"
+		// Movement
+		// ----------------------------------------------------------------
+		// Type of locomotion - ground, air
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_FLY"
+		// Speed
+		"MovementSpeed"	"100"
+		// Turning rate.
+		"MovementTurnRate"	"10"
+		// Status
+		// ----------------------------------------------------------------
+		// Base health.
+		"StatusHealth"	"99999"
+		// Health regeneration rate.
+		"StatusHealthRegen"	"99999"
+		// Base mana.
+		"StatusMana"	"99999"
+		// Mana regeneration rate.
+		"StatusManaRegen"	"99999"
+		// Team
+		// ----------------------------------------------------------------
+		// Team name.
+		"TeamName"	"DOTA_TEAM_GOODGUYS"
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+		// Vision
+		// ----------------------------------------------------------------
+		// Range of vision during day light.
+		"VisionDaytimeRange"	"900"
+		// Range of vision at night time.
+		"VisionNighttimeRange"	"600"
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+		"IsAncient"	"1"
 	}
 }
