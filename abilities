@@ -4284,7 +4284,7 @@
 					"Damage"
 					{
 						"Type"	"DAMAGE_TYPE_MAGICAL"
-						"Damage"	"20000"
+						"Damage"	"12000"
 						"Target"	"TARGET"
 					}
 					"AttachEffect"
@@ -4675,13 +4675,13 @@
 		"AbilityCastRange"	"300"
 		"precache"
 		{
-			"particle"	"particles/units/heroes/hero_winter_wyvern/wyvern_winters_curse_status_ice.vpcf"
+			"particle"	"particles/econ/items/viper/viper_ti7_immortal/viper_poison_crimson_debuff_ti7.vpcf"
 		}
 		"Modifiers"
 		{
 			"modifier_tower_jihan_buff"
 			{
-				"EffectName"	"particles/units/heroes/hero_winter_wyvern/wyvern_winters_curse_status_ice.vpcf"
+				"EffectName"	"particles/econ/items/viper/viper_ti7_immortal/viper_poison_crimson_debuff_ti7.vpcf"
 				"EffectAttachType"	"follow_origin"
 				"Properties"
 				{
@@ -4691,6 +4691,16 @@
 				}
 				"States"	{}
 				"TextureName"	"ancient_apparition_ice_blast"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"	"TARGET"
+						"Type"	"DAMAGE_TYPE_MAGICAL"
+						"Damage"	"128"
+					}
+				}
+				"ThinkInterval"	"1"
 			}
 			"modifier_tower_jihan"
 			{
@@ -4704,7 +4714,7 @@
 							"Types"	"DOTA_UNIT_TARGET_BASIC"
 							"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 							"Center"	"TARGET"
-							"Radius"	"300"
+							"Radius"	"400"
 						}
 						"ModifierName"	"modifier_tower_jihan_buff"
 						"Duration"	"3"
@@ -6448,7 +6458,7 @@
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
-		"AbilityCooldown"	"1"
+		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
 		"OnSpellStart"
@@ -6906,6 +6916,7 @@
 				}
 				"Properties"	{}
 				"IsBuff"	"1"
+				"TextureName"	"abaddon_aphotic_shield"
 			}
 		}
 	}
@@ -12725,12 +12736,12 @@
 			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"slow_movement_speed"	"-50"
+				"slow_movement_speed"	"-60"
 			}
 			"04"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"slow_attack_speed"	"-50"
+				"slow_attack_speed"	"-60"
 			}
 			"05"
 			{
@@ -12750,12 +12761,12 @@
 			"08"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"damage"	"15000"
+				"damage"	"8000"
 			}
 			"09"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"damage_scepter"	"15000"
+				"damage_scepter"	"8000"
 			}
 			"10"
 			{
@@ -14326,6 +14337,73 @@
 		}
 	}
 
+	"enemy_word_yinhun"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"arc_warden_spark_wraith"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Modifiers"
+		{
+			"modifier_enemy_word_yinhun"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"Target"	"ATTACKER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"YinHun"
+					}
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"duration"	"10 20 30 40"
+			}
+		}
+	}
+
+	"enemy_word_jili"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"undying_soul_rip"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"enemy_word_xuechi"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"bloodseeker_blood_bath"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"enemy_word_baonu"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"beastmaster_primal_roar"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"enemy_word_xietong"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"meepo_divided_we_stand_scavenger"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"enemy_word_aojiao"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"puck_waning_rift"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
 	"enemy_jili"
 	{
 		"BaseClass"	"ability_datadriven"
@@ -14379,6 +14457,130 @@
 			{
 				"var_type"	"FIELD_INTEGER"
 				"armor"	"4 6 8 10"
+			}
+		}
+	}
+
+	"ss_shackles"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"shadow_shaman_shackles"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"	"4"
+		"AbilityCooldown"	"10"
+		"AbilityManaCost"	"0"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"32"
+		"AbilityCastRangeBuffer"	"0"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"	"5 10 15 20"
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_shadowshaman/shadowshaman_shackle.vpcf"
+		}
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_shackles"
+				"Target"	"TARGET"
+				"Duration"	"%channel_time"
+			}
+		}
+		"OnChannelFinish"
+		{
+			"RunScript"
+			{
+				"Target"	"CASTER"
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"YinHunEnd"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_shackles"
+			{
+				"IsDebuff"	"1"
+				"States"
+				{
+					"MODIFIER_STATE_ROOTED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_SILENCED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"StatusEffectName"	"particles/status_fx/status_effect_shaman_shackle.vpcf"
+				"OverrideAnimation"	"ACT_DOTA_DISABLED"
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"	"particles/units/heroes/hero_shadowshaman/shadowshaman_shackle.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"Target"	"TARGET"
+						"ControlPointEntities"
+						{
+							"TARGET"	"attach_hitloc"
+							"TARGET"	"attach_hitloc"
+							"TARGET"	"attach_hitloc"
+							"TARGET"	"attach_hitloc"
+							"TARGET"	"attach_hitloc"
+							// Attach to the hands or any desired attach point of the hero
+							"CASTER"	"attach_hitloc"
+							"CASTER"	"attach_hitloc"
+						}
+					}
+				}
+				"Duration"	"5 10 15 20"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+			}
+		}
+	}
+
+	"bane_fiends_grip"
+	{
+		"MaxLevel"	"4"
+		"AbilityCastPoint"	"0.4"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCooldown"	"0"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"0"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"300"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"	"5 10 15 20"
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"fiend_grip_tick_interval"	"0.5"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"fiend_grip_mana_drain"	"0"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"fiend_grip_duration"	"10 20 30 40"
+				"LinkedSpecialBonus"	"special_bonus_unique_bane_3"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"fiend_grip_damage"	"0"
 			}
 		}
 	}
