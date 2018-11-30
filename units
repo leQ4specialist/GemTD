@@ -885,7 +885,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"100"
+		"StatusHealth"	"120"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -989,7 +989,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"70"
+		"StatusHealth"	"80"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -1093,7 +1093,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"170"
+		"StatusHealth"	"180"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -2029,7 +2029,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"2000"
+		"StatusHealth"	"2200"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -2445,7 +2445,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"31000"
+		"StatusHealth"	"30000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -2549,7 +2549,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"36000"
+		"StatusHealth"	"40000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -3067,7 +3067,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"10000"
+		"StatusHealth"	"11000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -4419,7 +4419,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"4500"
+		"StatusHealth"	"4000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -4731,7 +4731,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"16000"
+		"StatusHealth"	"18000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -4835,7 +4835,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"22000"
+		"StatusHealth"	"24000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -5355,7 +5355,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"13000"
+		"StatusHealth"	"12000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -5875,7 +5875,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"140000"
+		"StatusHealth"	"160000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -6707,7 +6707,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"150000"
+		"StatusHealth"	"170000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -6811,7 +6811,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"200000"
+		"StatusHealth"	"240000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -7123,7 +7123,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"160000"
+		"StatusHealth"	"190000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -7331,7 +7331,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"600000"
+		"StatusHealth"	"550000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -7539,7 +7539,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"300000"
+		"StatusHealth"	"270000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -7618,7 +7618,7 @@
 		// Ability 1.
 		"Ability1"	"gemtd_guai_base"
 		// Ability 2.
-		"Ability2"	""
+		"Ability2"	"enemy_thief"
 		// Ability 3.
 		"Ability3"	""
 		// Ability 4.
@@ -7673,7 +7673,7 @@
 		// Type of locomotion - ground, air
 		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_FLY"
 		// Speed
-		"MovementSpeed"	"550"
+		"MovementSpeed"	"500"
 		// Turning rate.
 		"MovementTurnRate"	"10"
 		"FollowRange"	"0"
@@ -7778,7 +7778,7 @@
 		// Type of locomotion - ground, air
 		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_FLY"
 		// Speed
-		"MovementSpeed"	"400"
+		"MovementSpeed"	"350"
 		// Turning rate.
 		"MovementTurnRate"	"10"
 		"FollowRange"	"0"
@@ -7853,7 +7853,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"600000"
+		"StatusHealth"	"700000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -8908,8 +8908,9 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creature"
 		// Model.
+		"Model"	"models/items/furion/treant/defender_of_the_jungle_lakad_coconut/defender_of_the_jungle_lakad_coconut.vmdl"
 		// "Model"	"models/props_tree/tree_oak_00.vmdl"
-		"Model"	"models/items/furion/treant/hallowed_horde/hallowed_horde.vmdl"
+		// "Model"	"models/items/furion/treant/hallowed_horde/hallowed_horde.vmdl"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -18380,7 +18381,7 @@
 		// Ability 5.
 		"Ability5"	""
 		// Ability 6 - Extra.
-		"Ability6"	"tower_jianshe3"
+		"Ability6"	"tower_jianshe4"
 		// Ability 7 - Extra.
 		"Ability7"	"tower_baoji1"
 		// Ability 8 - Extra.
@@ -19156,7 +19157,7 @@
 		// Ability 4.
 		"Ability4"	""
 		// Ability 5.
-		"Ability5"	"tower_zheyi2"
+		"Ability5"	"tower_zheyi3"
 		// Ability 6 - Extra.
 		"Ability6"	"tower_ranjin"
 		// Ability 7 - Extra.
@@ -19440,9 +19441,9 @@
 		// Normalized time in animation cycle to attack.
 		"AttackAnimationPoint"	"0"
 		// Range within a target can be acquired.
-		"AttackAcquisitionRange"	"1000"
+		"AttackAcquisitionRange"	"2000"
 		// Range within a target can be attacked.
-		"AttackRange"	"1000"
+		"AttackRange"	"1600"
 		"ProjectileModel"	"particles/units/heroes/hero_tinker/tinker_laser.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
@@ -20086,9 +20087,9 @@
 		// Normalized time in animation cycle to attack.
 		"AttackAnimationPoint"	"0"
 		// Range within a target can be acquired.
-		"AttackAcquisitionRange"	"1200"
+		"AttackAcquisitionRange"	"1400"
 		// Range within a target can be attacked.
-		"AttackRange"	"1000"
+		"AttackRange"	"1200"
 		"ProjectileModel"	"particles/units/heroes/hero_lina/lina_spell_laguna_blade.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
@@ -20704,7 +20705,7 @@
 		// Ability 5.
 		"Ability5"	"tower_slow3"
 		// Ability 6 - Extra.
-		"Ability6"	"tower_jianshe3"
+		"Ability6"	"tower_jianshe5"
 		// Ability 7 - Extra.
 		"Ability7"	"tower_baoji1"
 		// Ability 8 - Extra.
