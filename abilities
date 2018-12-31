@@ -4488,9 +4488,9 @@
 				"EffectAttachType"	"follow_overhead"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"-64"
-					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"-480"
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-100"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"-50"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"-500"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-50"
 				}
 			}
 		}
@@ -4501,7 +4501,7 @@
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"nevermore_dark_lord"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel"	"1"
 		"AbilityCastRange"	"800"
 		"precache"
@@ -4518,7 +4518,7 @@
 				"Aura_Radius"	"800"
 				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
 				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
+				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NONE"
 			}
 			"modifier_tower_bixi_buff"
 			{
@@ -4724,13 +4724,13 @@
 		"AbilityCastRange"	"300"
 		"precache"
 		{
-			"particle"	"particles/econ/items/viper/viper_ti7_immortal/viper_poison_crimson_debuff_ti7.vpcf"
+			"particle"	"particles/neutral_fx/gnoll_poison_debuff.vpcf"
 		}
 		"Modifiers"
 		{
 			"modifier_tower_jihan_buff"
 			{
-				"EffectName"	"particles/econ/items/viper/viper_ti7_immortal/viper_poison_crimson_debuff_ti7.vpcf"
+				"EffectName"	"particles/neutral_fx/gnoll_poison_debuff.vpcf"
 				"EffectAttachType"	"follow_origin"
 				"Properties"
 				{
