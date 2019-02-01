@@ -4801,7 +4801,7 @@
 		// Name of sound set.
 		"SoundSet"	"Undying_Zombie"
 		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
-		"ModelScale"	"3.3"
+		"ModelScale"	"3.5"
 		"Level"	"30"
 		"IsAncient"	"0"
 		// Abilities
