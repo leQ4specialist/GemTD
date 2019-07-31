@@ -551,6 +551,10 @@ function Precache( context )
 		"models/items/courier/mok/mok_flying.vmdl",
 		"models/courier/baby_rosh/babyroshan_winter18_flying.vmdl",
 		"particles/winter_fx/winter_present_projectile.vpcf",
+		"models/items/courier/nian_courier/nian_courier_flying.vmdl",
+		"effect/crown/1.vpcf",
+		"effect/crown/2.vpcf",
+		"soundevents/custom_sounds.vsndevts",
     }
      
     print("Precache...")
@@ -951,6 +955,14 @@ function InitVaribles()
 			castle_broken_model = "",
 			castle_scale = 1.0,
 		},
+		fishcoin = {
+			stone_model = "mod/fish_coins/gold/fish_coins2g_lod0.vmdl,mod/fish_coins/gold/fish_coins3g_lod0.vmdl,mod/fish_coins/silver/fish_coins2s_lod0.vmdl,mod/fish_coins/silver/fish_coins3s_lod0.vmdl", --没hitbox
+			stone_scale = 0.95,
+			stone_random_forward = true,
+			castle_model = "models/items/juggernaut/ward/fortunes_tout/fortunes_tout.vmdl",
+			castle_broken_model = "",
+			castle_scale = 3.0,
+		}
 		
 	}
 	GameRules:GetGameModeEntity().stealable_ability_pool = {
@@ -968,8 +980,8 @@ function InitVaribles()
 		"tower_attack1","tower_attack2","tower_attack3","tower_attack4","tower_attack5","tower_attack6","tower_attack7","tower_speed1","tower_speed2","tower_chain_frost",
 	}
 	GameRules:GetGameModeEntity().pet_list = {
-		h000 = "models/props_gameplay/donkey.vmdl",
-		
+		h001 = "models/props_gameplay/donkey.vmdl",
+		h002 = "models/props_gameplay/donkey_dire.vmdl",
 		--普通信使 beginner
 		h101 = "models/courier/skippy_parrot/skippy_parrot.vmdl",
 		h102 = "models/courier/smeevil_mammoth/smeevil_mammoth.vmdl",
@@ -1007,6 +1019,7 @@ function InitVaribles()
 		h132 = "models/items/furion/treant/ravenous_woodfang/ravenous_woodfang.vmdl",--焚牙树精new
 		h133 = "models/courier/mechjaw/mechjaw.vmdl",--机械咬人箱new
 		h134 = "models/items/courier/mole_messenger/mole_messenger.vmdl",--1级矿车老鼠
+		h135 = "models/items/courier/jumo_dire/jumo_dire.vmdl",
 
 		--小英雄信使 ameteur
 		h201 = "models/courier/doom_demihero_courier/doom_demihero_courier.vmdl",
@@ -1045,6 +1058,10 @@ function InitVaribles()
 		h232 = "models/courier/beetlejaws/mesh/beetlejaws.vmdl",--甲虫咬人箱new
 		h233 = "models/courier/smeevil_bird/smeevil_bird.vmdl",
 		h234 = "models/items/courier/mole_messenger/mole_messenger_lvl4.vmdl",--蜡烛头矿车老鼠
+		h235 = "models/items/courier/chocobo/chocobo.vmdl", --迅捷陆行鸟
+		h236 = "models/items/courier/flightless_dod/flightless_dod.vmdl", --嘟嘟鸟
+		h237 = "models/items/courier/frostivus2018_courier_serac_the_seal/frostivus2018_courier_serac_the_seal.vmdl",
+		h238 = "models/items/courier/pangolier_squire/pangolier_squire.vmdl",
 
 		--珍藏信使 pro
 		h301 = "models/items/courier/bookwyrm/bookwyrm.vmdl",
@@ -1084,7 +1101,9 @@ function InitVaribles()
 		h333 = "models/courier/turtle_rider/turtle_rider.vmdl",
 		h334 = "models/courier/smeevil_crab/smeevil_crab.vmdl",
 		h335 = "models/items/courier/mole_messenger/mole_messenger_lvl6.vmdl",--绿钻头矿车老鼠
+		h336 = "models/items/courier/amaterasu/amaterasu.vmdl", --天照大神
 
+		h399 = "models/courier/baby_rosh/babyroshan_winter18.vmdl",--姜饼肉山
 
 		--战队信使 master
 		h401 = "models/courier/navi_courier/navi_courier.vmdl",
@@ -1118,7 +1137,12 @@ function InitVaribles()
 		h427 = "models/courier/smeevil_magic_carpet/smeevil_magic_carpet.vmdl",
 		h428 = "models/items/courier/mole_messenger/mole_messenger_lvl7.vmdl",--绿钻头金矿车老鼠
 
-		h499 = "models/items/courier/krobeling_gold/krobeling_gold_flying.vmdl",--金dp
+		h499 = "models/items/courier/krobeling_gold/krobeling_gold.vmdl",--金dp
+		h429 = "models/items/courier/nilbog/nilbog.vmdl",--贪小疯魔
+
+		h430 = "models/courier/frull/frull_courier.vmdl", --灵犀弗拉尔
+		h431 = "models/items/courier/sltv_10_courier/sltv_10_courier.vmdl", --黄油小生
+		h432 = "models/items/courier/nian_courier/nian_courier.vmdl", --年兽宝宝
 
 		h444 = "models/props_gameplay/donkey.vmdl", 
 	}
@@ -1243,6 +1267,12 @@ function InitVaribles()
 		[3] = 0
 	}
 	GameRules:GetGameModeEntity().team_gold = 0
+	GameRules:GetGameModeEntity().team_gold_race = {
+		[0] = 0,
+		[1] = 0,
+		[2] = 0,
+		[3] = 0,
+	}
 	GameRules:GetGameModeEntity().gem_swap = {}
 	GameRules:GetGameModeEntity().is_passed = false
 	GameRules:GetGameModeEntity().is_cheat = false
@@ -1346,11 +1376,11 @@ function InitVaribles()
 		[21] = {},
 		[22] = {"enemy_high_armor"},
 		[23] = {"enemy_zheguang"},
-		[24] = {"shredder_reactive_armor"},
+		[24] = {"mars_bulwark"},
 		[25] = {"enemy_high_armor"},
 		[26] = {},
 		[27] = {"enemy_bukeqinfan"},
-		[28] = {"shredder_reactive_armor"},
+		[28] = {"mars_bulwark"},
 		[29] = {"guai_shanbi","enemy_zheguang"},
 		[30] = {},
 		[31] = {"enemy_zheguang"},
@@ -1378,7 +1408,6 @@ function InitVaribles()
 		"enemy_bukeqinfan",
 		"guai_shanbi",
 		"guai_jiaoxieguanghuan",
-		"shredder_reactive_armor",
 		"tidehunter_kraken_shell",
 		"enemy_wumian",
 		"enemy_momian",
@@ -1388,6 +1417,7 @@ function InitVaribles()
 		"enemy_thief",
 		"enemy_high_armor",
 		"enemy_jili",
+		"mars_bulwark",
 	}
 
 	--精英BOSS列表
@@ -1402,6 +1432,7 @@ function InitVaribles()
 		gemtd_mofafeitanxiaoemo_boss_fly = {
 			[1] = "gemtd_zard_boss_fly",
 			[2] = "gemtd_crab_smeevil_fly",
+			[3] = "gemtd_nianshou_boss_fly",
 		},
 		gemtd_guixiaoxieling_boss_fly = {
 			[1] = "gemtd_gugubiao_boss_fly",
@@ -2123,6 +2154,8 @@ function GemTD:InitGameMode()
 	PlayerResource:SetCustomPlayerColor(2, 255, 0, 0)
 	PlayerResource:SetCustomPlayerColor(3, 255, 0, 255)
 
+
+
 	--监听玩家成功连入游戏
     ListenToGameEvent("player_connect_full", Dynamic_Wrap(GemTD,"OnPlayerConnectFull" ),self) 
     --监听玩家断开连接
@@ -2137,7 +2170,7 @@ function GemTD:InitGameMode()
     ListenToGameEvent("player_chat", Dynamic_Wrap(GemTD, "OnPlayerSay"), self)
     --监听英雄升级事件
     ListenToGameEvent("dota_player_gained_level", Dynamic_Wrap(GemTD,"OnPlayerGainedLevel"), self)
-    ListenToGameEvent("dota_player_used_ability", Dynamic_Wrap(GemTD,"OnPlayerUseAbility"), self)
+    --ListenToGameEvent("dota_player_used_ability", Dynamic_Wrap(GemTD,"OnPlayerUseAbility"), self)
 
     ListenToGameEvent("dota_item_purchased", Dynamic_Wrap(GemTD,"OnItemPurchased"), self)
 	
@@ -2156,7 +2189,7 @@ function GemTD:InitGameMode()
 	CustomGameEventManager:RegisterListener("add_bush_ticket", Dynamic_Wrap(GemTD, "OnAddBushTicket") )
 	CustomGameEventManager:RegisterListener("confirm_use_bush_ticket", Dynamic_Wrap(GemTD, "OnConfirmUseBushTicket") )
 	CustomGameEventManager:RegisterListener("prt_localize", Dynamic_Wrap(GemTD, "OnPrtLocalize") )
-    
+
 end
 
 function GemTD:OnPrt(keys)
@@ -2315,6 +2348,11 @@ function GemTD:OnPlayerPickHero(keys)
     	Timers:CreateTimer(1,function()
     		-- EmitGlobalSound("announcer_diretide_2012_announcer_welcome_0"..RandomInt(3,5))
     		CustomNetTables:SetTableValue( "game_state", "startgame",{ map_name = GetMapName(),hehe=RandomInt(1,10000)} )
+    	
+    		-- Timers:CreateTimer(1,function()
+    		-- 	share_player_gold()
+    		-- 	return 1
+    		-- end)
     	end)
     end	
 end
@@ -2338,7 +2376,7 @@ function GemTD:OnReceiveSteamIDs(keys)
 
 	GameRules:SendCustomMessage('Connecting server...',0,0)
 
-	local url = "http://101.200.189.65:430/gemtd/201901/heros/get/@"..keys.steam_ids.."?ver=v1&compen_shell=2&pcount="..pcount.."&award=true"
+	local url = "http://gemtd.ppbizon.com/gemtd/201901/heros/get/@"..keys.steam_ids.."?ver=v1&compen_shell=2&pcount="..pcount.."&award=true"
 	local req = CreateHTTPRequestScriptVM("GET", url)
 	req:SetHTTPRequestAbsoluteTimeoutMS(20000)
 	req:Send(function (result)
@@ -2418,11 +2456,13 @@ function GemTD:OnLobster2(t)
 			onduty_hero = v["onduty_hero"],
 			is_black = v["is_black"],
 			pet = v["pet"],
+			pet2 = v["pet2"],
 			my_maze = v["my_maze"],
 			pcount = t["pcount"],
 			quest = v["quest"],
 			extend_tool = v["extend_tool"],
 			items = v["items"],
+			is_crown = v["is_crown"],
 		})
 
 		-- if GameRules:GetGameModeEntity().myself ~= true and (v["is_test_user"] == nil or v["is_test_user"] ~= true) then
@@ -2464,6 +2504,16 @@ function GemTD:OnLobster2(t)
 		end
 		if is_all_precache_finished == true then
 			GameRules:SendCustomMessage('GAME START',0,0)
+
+			if GetMapName() == "gemtd_coop" then
+			    for i=0,3 do
+			    	for j=0,3 do
+			    		PlayerResource:SetUnitShareMaskForPlayer( i, j, 1, true )
+			    		PlayerResource:SetUnitShareMaskForPlayer( i, j, 2, true )
+			    	end
+			    end
+			    prt('SHARED CONTRL ENABLED.')
+			end
 			-- EmitGlobalSound('DireTideGameStart.DireSide')
 			if is_test_game_but_cannot_test == true then
 				return
@@ -2485,7 +2535,9 @@ function GemTD:OnReceiveHeroInfo(keys)
 	local onduty_hero = keys.onduty_hero.hero_id;
 	local onduty_hero_info = keys.onduty_hero;
 	local pet = keys.pet
+	local pet2 = keys.pet2
 	local my_maze = keys.my_maze
+	local is_crown = keys.is_crown
 
 	local heroindex_old = heroindex
 	local hero = EntIndexToHScript(heroindex)
@@ -2495,6 +2547,8 @@ function GemTD:OnReceiveHeroInfo(keys)
 	if hero:FindAbilityByName("gemtd_build_stone") ~= nil then
 		is_can_build = hero:FindAbilityByName("gemtd_build_stone"):IsActivated()
 	end
+
+	--切换英雄的宠物相关
 	local change_pet = nil
 	local change_pet_name = nil
 	if hero.pet ~= nil then
@@ -2503,6 +2557,15 @@ function GemTD:OnReceiveHeroInfo(keys)
 	if hero.pet_name ~= nil then
 		change_pet_name = hero.pet_name
 	end
+	local change_pet2 = nil
+	local change_pet_name2 = nil
+	if hero.pet2 ~= nil then
+		change_pet2 = hero.pet2
+	end
+	if hero.pet_name2 ~= nil then
+		change_pet_name2 = hero.pet_name2
+	end
+
 	PrecacheUnitByNameAsync(GameRules:GetGameModeEntity().hero_sea[onduty_hero], function()
 		local pppp = hero:GetAbsOrigin()
 		hero:SetAbsOrigin(Vector(0,0,0))
@@ -2513,6 +2576,13 @@ function GemTD:OnReceiveHeroInfo(keys)
 			ParticleManager:DestroyParticle(hero.pp,true)
 		end
 		local hero_new = PlayerResource:ReplaceHeroWith(id,GameRules:GetGameModeEntity().hero_sea[onduty_hero],PlayerResource:GetGold(id),0)
+		
+		-- hero_new:SetControllableByPlayer(0, true)
+		-- hero_new:SetControllableByPlayer(1, true)
+		-- hero_new:SetControllableByPlayer(2, true)
+		-- hero_new:SetControllableByPlayer(3, true)
+
+
 		-- local hero_new = hero
 		hero_new:RemoveAbility("techies_suicide")
 		hero_new:RemoveAbility("techies_focused_detonate")
@@ -2683,6 +2753,9 @@ function GemTD:OnReceiveHeroInfo(keys)
 			if change_pet ~= nil then
 				change_pet:Destroy()
 			end
+			if change_pet2 ~= nil then
+				change_pet2:Destroy()
+			end
 			--生成宠物
 			if change_pet_name ~= nil then
 				pet = change_pet_name
@@ -2719,6 +2792,48 @@ function GemTD:OnReceiveHeroInfo(keys)
 					end
 				end)
 			end
+
+			if change_pet_name2 ~= nil then
+				pet2 = change_pet_name2
+			end
+			if pet2 ~= nil and GameRules:GetGameModeEntity().pet_list[pet2] ~= nil then
+				local my_pet2 = CreateUnitByName("gemtd_pet", Entities:FindByName(nil,"center"..id):GetAbsOrigin() ,false,nil,nil, DOTA_TEAM_GOODGUYS) 
+				my_pet2.ftd = 2009
+				my_pet2:SetOwner(hero_new)
+				my_pet2:SetOriginalModel(GameRules:GetGameModeEntity().pet_list[pet2])
+				my_pet2:SetModel(GameRules:GetGameModeEntity().pet_list[pet2])
+				hero_new.pet2 = my_pet2
+				hero_new.pet_name2 = pet2
+				my_pet2.owner = hero_new
+
+				Timers:CreateTimer(1,function()
+					if my_pet2 == nil or my_pet2.owner == nil or my_pet2:IsNull() == true or my_pet2:IsAlive() == false then
+						return 1
+					end
+					if (my_pet2:GetAbsOrigin() - my_pet2.owner:GetAbsOrigin()):Length2D() >200 then
+						local ran1 = RandomInt(50,200)
+						local ran11 = RandomInt(0,1)
+						if ran11 == 0 then 
+							ran1 = -ran1
+						end
+						local ran2 = RandomInt(50,200)
+						local ran22 = RandomInt(0,1)
+						if ran22 == 0 then 
+							ran2 = -ran2
+						end
+						my_pet2:MoveToPosition(my_pet2.owner:GetAbsOrigin()+Vector(ran1,ran2,0))
+						return 1
+					else
+						return 1
+					end
+				end)
+			end
+
+			if is_crown == 1 then
+				hero_new.is_crown = true
+				ShowCrown(hero_new,1)
+			end
+
 			GameRules:GetGameModeEntity().is_precache_finished[id] = true
 			GameRules:SendCustomMessage('Player '..id..' READY',0,0)
 		end
@@ -2956,7 +3071,7 @@ function GemTD:OnSaveMaze(keys)
 
 	--发送服务器
 	local r = RandomFloat(0,1)
-	local url = "http://101.200.189.65:430/gemtd/maze/save/@"..steam_id..'@'..game_mode..'@'..maze_str..'?hehe='..RandomInt(1,100000)
+	local url = "http://gemtd.ppbizon.com/gemtd/maze/save/@"..steam_id..'@'..game_mode..'@'..maze_str..'?hehe='..RandomInt(1,100000)
 
 	Timers:CreateTimer(r,function()
 		local req = CreateHTTPRequestScriptVM("GET", url)
@@ -3320,12 +3435,20 @@ function OnThink()
 					        	if u:FindAbilityByName("enemy_thief") ~= nil then
 					        		local steal_count = math.floor(GameRules:GetGameModeEntity().team_gold*0.01)
 					        		local gold_count = math.floor(GameRules:GetGameModeEntity().team_gold*0.99)
-									local ii = 0
-									for ii = 0, 20 do
-										PlayerResource:SetGold(ii, gold_count, true)
-									end
+
 									GameRules:GetGameModeEntity().team_gold = gold_count
-									CustomNetTables:SetTableValue( "game_state", "gem_team_gold", { gold = gold_count } );
+									for i=0, PlayerResource:GetPlayerCount()-1 do
+										PlayerResource:SetGold(i, GameRules:GetGameModeEntity().team_gold, true)
+									end
+
+									CustomNetTables:SetTableValue( "game_state", "gem_team_gold", { gold = GameRules:GetGameModeEntity().team_gold, hehe = RandomInt(1,1000000)} )
+
+									-- local ii = 0
+									-- for ii = 0, 20 do
+									-- 	PlayerResource:SetGold(ii, gold_count, true)
+									-- end
+									-- GameRules:GetGameModeEntity().team_gold = gold_count
+									-- CustomNetTables:SetTableValue( "game_state", "gem_team_gold", { gold = gold_count } );
 									--窃贼特效
 									AMHC:CreateNumberEffect(u,steal_count,5,AMHC.MSG_ORIT,"yellow",9)
 									EmitGlobalSound("Item.CrimsonGuard.Cast")
@@ -3548,7 +3671,6 @@ function spawn_one_enemy(playerid,guai_name)
 	position.z = 150
 	local u = CreateUnitByName(guai_name, position,true,nil,nil,DOTA_TEAM_BADGUYS) 
     u.ftd = 2009
-    
 
     if GameRules:GetGameModeEntity().gem_nandu <= PlayerResource:GetPlayerCount() then
     	GameRules:GetGameModeEntity().gem_nandu = PlayerResource:GetPlayerCount()
@@ -4048,7 +4170,7 @@ function race_player_fail(player_id)
 				return
 			end
 			GameRules:GetGameModeEntity().is_posted_game = true
-			local url = "http://101.200.189.65:430/gemtd/20181201/race/ranking/save/@"..GameRules:GetGameModeEntity().death_stack.."?hehe="..RandomInt(1,100000).."&duration="..game_duration.."&wave="..GameRules:GetGameModeEntity().level
+			local url = "http://gemtd.ppbizon.com/gemtd/20181201/race/ranking/save/@"..GameRules:GetGameModeEntity().death_stack.."?hehe="..RandomInt(1,100000).."&duration="..game_duration.."&wave="..GameRules:GetGameModeEntity().level
 			local bad_string = nil
 			for q,vq in pairs(GameRules:GetGameModeEntity().zaotui_table) do
 				if vq == 1 then
@@ -4590,6 +4712,14 @@ function gemtd_build_stone(keys)
 			})
 			return false
 		end
+	end
+
+	--50关以后不能造
+	if GameRules:GetGameModeEntity().level > 50 then
+		CustomGameEventManager:Send_ServerToPlayer(caster:GetPlayerOwner(),"mima",{
+			text = "text_mima_cannot_build_here"
+		})
+		return
 	end
 
 	--附近有怪，不能造
@@ -5473,6 +5603,7 @@ function choose_update_update_stone(keys)
 
 	local u = CreateUnitByName(unit_name, p,false,nil,nil,DOTA_TEAM_GOODGUYS) 
 	u.ftd = 2009
+	PlayCombineSound(u)
 
 	--发弹幕
 	ShowCombat({
@@ -5865,17 +5996,19 @@ function finish_build(player_id)
 			end
 		else
 			--建完的不是当前关的，再给建造机会
-			set_build_hummer(player_id, GameRules:GetGameModeEntity().level-GameRules:GetGameModeEntity().build_ready_wave[player_id])
+			if GameRules:GetGameModeEntity().level <= 50 then
+				set_build_hummer(player_id, GameRules:GetGameModeEntity().level-GameRules:GetGameModeEntity().build_ready_wave[player_id])
 
-			local h = PlayerResource:GetPlayer(player_id):GetAssignedHero()
+				local h = PlayerResource:GetPlayer(player_id):GetAssignedHero()
 
-			SetAbilityActiveStatus(h,true)
-			GameRules:GetGameModeEntity().is_build_ready[player_id]=false
-			h.build_level = GameRules:GetGameModeEntity().level
+				SetAbilityActiveStatus(h,true)
+				GameRules:GetGameModeEntity().is_build_ready[player_id]=false
+				h.build_level = GameRules:GetGameModeEntity().level
 
-			h:FindAbilityByName("gemtd_build_stone"):SetActivated(true)
-			h:FindAbilityByName("gemtd_remove"):SetActivated(true)
-			h:SetMana(5.0)
+				h:FindAbilityByName("gemtd_build_stone"):SetActivated(true)
+				h:FindAbilityByName("gemtd_remove"):SetActivated(true)
+				h:SetMana(5.0)
+			end
 
 		end
 	end
@@ -5926,6 +6059,9 @@ function start_shuaguai()
 	local date = tonumber(string.split(GetSystemDate(),'/')[2])
 	if (GameRules:GetGameModeEntity().level ==20 and (RandomInt(1,100)>90 or date>20) ) then
 		GameRules:GetGameModeEntity().guai[GameRules:GetGameModeEntity().level] =  "gemtd_yuediyang_boss"
+	end
+	if (GameRules:GetGameModeEntity().level ==30 and RandomInt(1,100)>80 ) then
+		GameRules:GetGameModeEntity().guai[GameRules:GetGameModeEntity().level] = "gemtd_nianshou_boss_fly"
 	end
 	if (GameRules:GetGameModeEntity().level ==30 and RandomInt(1,100)>90 ) then
 		GameRules:GetGameModeEntity().guai[GameRules:GetGameModeEntity().level] = "gemtd_zard_boss_fly"
@@ -6013,7 +6149,7 @@ function GemTD:OnEntityKilled( keys )
 						PlayerResource:IncrementKills(3,1)
 					end
 
-					if killed_unit:GetUnitName() == "gemtd_zard_boss_fly" or killed_unit:GetUnitName() == "gemtd_kongxinnanguaren_boss" or killed_unit:GetUnitName() == "gemtd_yuediyang_boss" or killed_unit:GetUnitName() == "gemtd_gugubiao_boss_fly" then
+					if killed_unit:GetUnitName() == "gemtd_zard_boss_fly" or killed_unit:GetUnitName() == "gemtd_kongxinnanguaren_boss" or killed_unit:GetUnitName() == "gemtd_yuediyang_boss" or killed_unit:GetUnitName() == "gemtd_gugubiao_boss_fly" or killed_unit:GetUnitName() == "gemtd_nianshou_boss_fly" then
 						GameRules:GetGameModeEntity().kills = GameRules:GetGameModeEntity().kills + 5
 						GameRules:GetGameModeEntity().extra_kill = GameRules:GetGameModeEntity().extra_kill + 5
 						for k=1,5 do
@@ -6147,20 +6283,26 @@ function GemTD:OnEntityKilled( keys )
 						if killer_unit ~= nil and killer_unit:FindModifierByName("modifier_tower_tanlan") ~= nil and RandomInt(1,100)<=5 then
 							exp_count = exp_count * 10
 						end
-						if killer_unit ~= nil then
-							PlayerResource:SetGold(0, PlayerResource:GetGold(0)+exp_count, true)
-							--同步玩家金钱
-							sync_player_gold()
-						end
+						-- if killer_unit ~= nil then
+						-- 	PlayerResource:SetGold(0, PlayerResource:GetGold(0)+exp_count, true)
+						-- 	--同步玩家金钱
+						-- 	sync_player_gold()
+						-- end
 					end
 					AMHC:CreateNumberEffect(killed_unit,exp_count,5,AMHC.MSG_GOLD,"yellow",0)
-					GameRules:GetGameModeEntity().team_gold = GameRules:GetGameModeEntity().team_gold + exp_count
-
 					if exp_count >= 100 then
 						EmitGlobalSound("General.CoinsBig")
 					else
 						EmitGlobalSound("General.Coins")
 					end
+
+					--给玩家金钱
+					GameRules:GetGameModeEntity().team_gold = math.floor(GameRules:GetGameModeEntity().team_gold + exp_count)
+					for i=0, PlayerResource:GetPlayerCount()-1 do
+						PlayerResource:SetGold(i, GameRules:GetGameModeEntity().team_gold, true)
+					end
+
+					CustomNetTables:SetTableValue( "game_state", "gem_team_gold", { gold = GameRules:GetGameModeEntity().team_gold, hehe = RandomInt(1,1000000)} )
 				end
 			end
 			GameRules:GetGameModeEntity().guai_live_count = GameRules:GetGameModeEntity().guai_live_count - 1
@@ -6294,7 +6436,7 @@ function GemTD:OnEntityKilled( keys )
 				if string.find(killed_unit:GetUnitName(), "boss") then
 					money_add = 300
 					kills_add = 10
-					if killed_unit:GetUnitName() == "gemtd_zard_boss_fly" or killed_unit:GetUnitName() == "gemtd_kongxinnanguaren_boss" or killed_unit:GetUnitName() == "gemtd_yuediyang_boss" or killed_unit:GetUnitName() == "gemtd_gugubiao_boss_fly" then
+					if killed_unit:GetUnitName() == "gemtd_zard_boss_fly" or killed_unit:GetUnitName() == "gemtd_kongxinnanguaren_boss" or killed_unit:GetUnitName() == "gemtd_yuediyang_boss" or killed_unit:GetUnitName() == "gemtd_gugubiao_boss_fly" or killed_unit:GetUnitName() == "gemtd_nianshou_boss_fly" then
 						kills_add = 15
 					end
 					if killed_unit:GetUnitName() == "gemtd_roushan_boss_fly_jin" or killed_unit:GetUnitName() == "gemtd_roushan_boss_fly_bojin" then
@@ -6302,9 +6444,15 @@ function GemTD:OnEntityKilled( keys )
 					end
 				end
 				if killed_unit.is_jingying == true then
-					kills_add = 4
+					kills_add = kills_add * 4
 					money_add = money_add * 10
 				end
+
+				if GameRules:GetGameModeEntity().enemy_spawned_wave - GameRules:GetGameModeEntity().build_ready_wave[player_id] >= 2 then
+					--如果依然有至少2次建造次数没用完，击杀收益减半
+					money_add = math.floor(money_add / 2)
+				end
+
 				--增加击杀数
 				for k=1,kills_add do
 					PlayerResource:IncrementKills(player_id,1)
@@ -6315,7 +6463,7 @@ function GemTD:OnEntityKilled( keys )
 
 					--增加金钱
 					if money_add >= 100 then
-						money_add = money_add/2
+						money_add = math.floor(money_add/2)
 					end
 					if keys.entindex_attacker ~= nil then
 						local killer_unit = EntIndexToHScript(keys.entindex_attacker)
@@ -6325,17 +6473,24 @@ function GemTD:OnEntityKilled( keys )
 							money_add = money_add * 10
 						end
 					end
+
+					--给玩家金钱
 					AMHC:CreateNumberEffect(killed_unit,money_add,5,AMHC.MSG_GOLD,"yellow",0)
 					if money_add >= 100 then
 						EmitSoundOn("General.CoinsBig",killed_unit)
 					else
 						EmitSoundOn("General.Coins",killed_unit)
 					end
-					PlayerResource:SetGold(player_id, PlayerResource:GetGold(player_id)+money_add, true)
 
-					CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(player_id),"show_money",{
-						money = PlayerResource:GetGold(player_id),
-					})
+					GameRules:GetGameModeEntity().team_gold_race[player_id] = math.floor(GameRules:GetGameModeEntity().team_gold_race[player_id] +money_add)
+					PlayerResource:SetGold(player_id, GameRules:GetGameModeEntity().team_gold_race[player_id], true)
+					CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(player_id),"show_money",{ money = GameRules:GetGameModeEntity().team_gold_race[player_id],})
+
+					-- PlayerResource:SetGold(player_id, PlayerResource:GetGold(player_id)+money_add, true)
+
+					-- CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(player_id),"show_money",{
+					-- 	money = PlayerResource:GetGold(player_id),
+					-- })
 				end
 			end
 			
@@ -6352,7 +6507,7 @@ function GemTD:OnEntityKilled( keys )
 					end
 
 					GameRules:GetGameModeEntity().top_runner = player_id
-					CustomNetTables:SetTableValue( "game_state", "gem_top_runner", { player = player_id, hehe = RandomInt(1,10000) } ); 
+					CustomNetTables:SetTableValue( "game_state", "gem_top_runner", { player = player_id, hehe = RandomInt(1,10000) } ) 
 					
 					--统计本关mvp
 					if GameRules:GetGameModeEntity().level <= 50 then
@@ -7068,30 +7223,40 @@ function SetHeroLevelShow(hero_new)
 end
 --英雄操作4——同步金钱
 function sync_player_gold(caster)
-	local player_id = 0
-	if caster ~= nil then
-		player_id = caster:GetOwner():GetPlayerID()
-	end
 	--同步玩家金钱
-	if GetMapName() == 'gemtd_1p' or GetMapName() == 'gemtd_coop' then
-		local gold_count = PlayerResource:GetGold(player_id)
-		local ii = 0
-		for ii = 0, 20 do
-			-- if ( PlayerResource:IsValidPlayer( ii ) ) then
-				-- local player = PlayerResource:GetPlayer(ii)
-				-- if player ~= nil then
-					PlayerResource:SetGold(ii, gold_count, true)
-				-- end
-			-- end
-		end
-		GameRules:GetGameModeEntity().team_gold = gold_count
-		CustomNetTables:SetTableValue( "game_state", "gem_team_gold", { gold = gold_count } );
-	else
-		for player_id=0, PlayerResource:GetPlayerCount()-1 do
-			CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(player_id),"show_money",{ money = PlayerResource:GetGold(player_id),})
-		end
-	end
+	-- if GetMapName() == 'gemtd_1p' or GetMapName() == 'gemtd_coop' then
+	-- 	local gold_one = PlayerResource:GetGold(0)
+	-- 	if caster ~= nil then
+	-- 		caster_player_id = caster:GetOwner():GetPlayerID()
+	-- 		gold_one = PlayerResource:GetGold(caster_player_id)
+	-- 	end
+	-- 	for player_id=0, PlayerResource:GetPlayerCount()-1 do
+	-- 		PlayerResource:SetGold(player_id, gold_one, true)
+	-- 	end
+	-- 	GameRules:GetGameModeEntity().team_gold = gold_one
+	-- 	CustomNetTables:SetTableValue( "game_state", "gem_team_gold", { gold = gold_one } );
+	-- else
+	-- 	for player_id=0, PlayerResource:GetPlayerCount()-1 do
+	-- 		CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(player_id),"show_money",{ money = PlayerResource:GetGold(player_id),})
+	-- 	end
+	-- end
 end
+-- function share_player_gold()
+-- 	if GetMapName() == 'gemtd_1p' or GetMapName() == 'gemtd_coop' then
+-- 		local gold_total =0
+-- 		for player_id=0, PlayerResource:GetPlayerCount()-1 do
+-- 			gold_total = gold_total + PlayerResource:GetGold(player_id)
+-- 		end
+-- 		local gold_one = math.floor(gold_total/PlayerResource:GetPlayerCount())
+-- 		for player_id=0, PlayerResource:GetPlayerCount()-1 do
+-- 			PlayerResource:SetGold(player_id, gold_one, true)
+-- 		end
+-- 		GameRules:GetGameModeEntity().team_gold = gold_one
+-- 		CustomNetTables:SetTableValue( "game_state", "gem_team_gold", { gold = gold_one } );
+-- 	else
+-- 		return
+-- 	end
+-- end
 
 --界面操作1——共享地图
 function GemTD:OnReceiveShareMap(keys)
@@ -7161,6 +7326,7 @@ function GemTD:OnPlayerSay( keys )
 		PlayerResource:SetGold(hero:GetPlayerID(),9999,true)
 		EmitGlobalSound("General.CoinsBig")
 		GameRules:GetGameModeEntity().team_gold = 9999
+		GameRules:GetGameModeEntity().team_gold_race[hero:GetPlayerID()] = 9999
 		CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(hero:GetPlayerID()),"show_money",{
 			money = PlayerResource:GetGold(hero:GetPlayerID()),
 		})
@@ -7214,6 +7380,11 @@ function GemTD:OnPlayerSay( keys )
 		local drop = CreateItemOnPositionForLaunch(hero:GetAbsOrigin(), newItem )
 		local dropRadius = RandomFloat( 50, 200 )
 		newItem:LaunchLootInitialHeight( false, 0, 200, 0.75, hero:GetAbsOrigin() + RandomVector(dropRadius ))
+	elseif tokens[1] == "-crown" and GameRules:GetGameModeEntity().myself == true then
+		local crown_level = tonumber(tokens[2] or 1)
+		prt('TEST CODE: CROWN = '..crown_level)
+		hero.is_crown = true
+		ShowCrown(hero,crown_level)
 	end
 		
 	CustomNetTables:SetTableValue( "game_state", "say_bubble", {text = keys.text, unit = heroindex, hehe = RandomInt(1,10000)} )
@@ -7660,6 +7831,14 @@ function gemtd_jidihuixue(keys)
 	local player_id = owner:GetPlayerID()
 	local level = caster:FindAbilityByName("gemtd_hero_huichun"):GetLevel()
 
+	--花钱
+	-- local cost_gold_result = CostGold({
+	-- 	caster = keys.caster,
+	-- 	gold_cost = keys.gold_cost
+	-- })
+	-- if cost_gold_result == false then
+	-- 	return
+	-- end
 	SetQuest('q211',false)
 
 	local huixue_max = {
@@ -7672,7 +7851,7 @@ function gemtd_jidihuixue(keys)
 	local hp_count = RandomInt(1,huixue_max[level])
 	EmitGlobalSound("DOTAMusic_Stinger.004")
 	--同步玩家金钱
-	sync_player_gold(caster)
+	-- sync_player_gold(caster)
 	if GetMapName() ~= "gemtd_race" then
 		GameRules:GetGameModeEntity().gem_castle_hp = GameRules:GetGameModeEntity().gem_castle_hp + hp_count
 	    if GameRules:GetGameModeEntity().gem_castle_hp > 100 then
@@ -7714,10 +7893,18 @@ function gemtd_hero_shanbi(keys)
 	local player_id = owner:GetPlayerID()
 	local level = caster:FindAbilityByName("gemtd_hero_shanbi"):GetLevel()
 
+	-- --花钱
+	-- local cost_gold_result = CostGold({
+	-- 	caster = keys.caster,
+	-- 	gold_cost = keys.gold_cost
+	-- })
+	-- if cost_gold_result == false then
+	-- 	return
+	-- end
 	SetQuest('q211',false)
 
 	--同步玩家金钱
-	sync_player_gold(caster)
+	-- sync_player_gold(caster)
 	if GetMapName() ~= "gemtd_race" then
 		--为宝石基地增加闪避buff
 		GameRules:GetGameModeEntity().gem_castle.shanbi = level*5 + 5
@@ -7759,10 +7946,18 @@ function gemtd_hero_shouhu(keys)
 	local player_id = owner:GetPlayerID()
 	local level = caster:FindAbilityByName("gemtd_hero_shouhu"):GetLevel()
 
+	--花钱
+	-- local cost_gold_result = CostGold({
+	-- 	caster = keys.caster,
+	-- 	gold_cost = keys.gold_cost
+	-- })
+	-- if cost_gold_result == false then
+	-- 	return
+	-- end
 	SetQuest('q211',false)
 
 	--同步玩家金钱
-	sync_player_gold(caster)
+	-- sync_player_gold(caster)
 	if GetMapName() ~= "gemtd_race" then
 		--为宝石基地增加守护buff
 		GameRules:GetGameModeEntity().gem_castle.shouhu = level
@@ -8097,13 +8292,10 @@ function gemtd_hero_miaozhun(keys)
 	sync_player_gold(caster)
 end
 --致命链接
-function GemTD:OnPlayerUseAbility(keys)
-	local player_id = keys.PlayerID
-	if keys.abilityname == "gemtd_hero_lianjie" then
-		--同步玩家金钱
-		sync_player_gold(caster)
-		SetQuest('q211',false)
-	end
+function gemtd_zhiminglianjie(keys)
+	local caster = keys.caster
+	sync_player_gold(caster)
+    SetQuest('q211',false)
 end
 --VS换
 function gemtd_hero_yixinghuanwei(keys)
@@ -8142,9 +8334,31 @@ function gemtd_hero_yixinghuanwei(keys)
 		}
 		local ability_level = caster:FindAbilityByName("gemtd_hero_yixinghuanwei"):GetLevel()
 		local cost = yixinghuanwei_cost[ability_level] or 0
-		local gold_count = PlayerResource:GetGold(player_id) + cost
-		PlayerResource:SetGold(player_id, gold_count, true)
-		sync_player_gold(caster)
+
+		if GetMapName()=="gemtd_race" then
+			--竞速模式
+			if GameRules:GetGameModeEntity().team_gold_race[player_id] == nil then
+				GameRules:GetGameModeEntity().team_gold_race[player_id] = 0
+			end
+			GameRules:GetGameModeEntity().team_gold_race[player_id] = math.floor(GameRules:GetGameModeEntity().team_gold_race[player_id] + cost)
+			PlayerResource:SetGold(player_id, GameRules:GetGameModeEntity().team_gold_race[player_id], true)
+
+			CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(player_id),"show_money",{ money = GameRules:GetGameModeEntity().team_gold_race[player_id],})
+		end
+
+		if GetMapName()=="gemtd_coop" or GetMapName()=="gemtd_1p" then
+			--合作/单人模式
+			if GameRules:GetGameModeEntity().team_gold == nil then
+				GameRules:GetGameModeEntity().team_gold = 0
+			end
+
+			GameRules:GetGameModeEntity().team_gold = math.floor(GameRules:GetGameModeEntity().team_gold + cost)
+			for i=0, PlayerResource:GetPlayerCount()-1 do
+				PlayerResource:SetGold(i, GameRules:GetGameModeEntity().team_gold, true)
+			end
+
+			CustomNetTables:SetTableValue( "game_state", "gem_team_gold", { gold = GameRules:GetGameModeEntity().team_gold, hehe = RandomInt(1,1000000)} )
+		end
 	end
 
 	--go!
@@ -8431,10 +8645,19 @@ function gemtd_hero_xuanfeng(keys)
 	local player_id = owner:GetPlayerID()
 	local p = keys.target_points[1]
 
+	--花钱
+	-- local cost_gold_result = CostGold({
+	-- 	caster = keys.caster,
+	-- 	gold_cost = keys.gold_cost
+	-- })
+	-- if cost_gold_result == false then
+	-- 	return
+	-- end
+
 	SetQuest('q211',false)
 
 	--同步玩家金钱
-	sync_player_gold(caster)
+	-- sync_player_gold(caster)
 
 	--新版旋风方案
 	--网格化坐标
@@ -8531,46 +8754,46 @@ function gemtd_hero_xuanfeng(keys)
 		end
 
 		xuanfeng_count = xuanfeng_count  - 1
+		if xuanfeng_units[xuanfeng_count] ~= nil then
+			local uu = EntIndexToHScript(xuanfeng_units[xuanfeng_count])
+			Timers:CreateTimer(0.3,function()
+				uu:SetAbsOrigin(Vector(5000,5000,0))
 
-		local uu = EntIndexToHScript(xuanfeng_units[xuanfeng_count])
-		Timers:CreateTimer(0.3,function()
-			uu:SetAbsOrigin(Vector(5000,5000,0))
+				if xuanfeng_count > 1 then
+					local r = xuanfeng_count
+					Timers:CreateTimer(0.01,function()
+						local r2 = r - 1
+						if r2<1 then 
+							r2 = xuanfeng_count
+						end
+						if xuanfeng_units[r] ~= nil and xuanfeng_units[r2] ~= nil then
 
-			if xuanfeng_count > 1 then
-				local r = xuanfeng_count
-				Timers:CreateTimer(0.3,function()
-					local r2 = r - 1
-					if r2<1 then 
-						r2 = xuanfeng_count
-					end
-					if xuanfeng_units[r] ~= nil and xuanfeng_units[r2] ~= nil then
-
-						local u1 = EntIndexToHScript(xuanfeng_units[r2])
-						local p2 = xuanfeng_positions[r]
-						
-						u1:SetAbsOrigin(p2)
-						r = r - 1
+							local u1 = EntIndexToHScript(xuanfeng_units[r2])
+							local p2 = xuanfeng_positions[r]
+							
+							u1:SetAbsOrigin(p2)
+							r = r - 1
+							if r<1 then 
+								uu:SetAbsOrigin(xuanfeng_positions[1])
+								return
+							end
+							return 0.01
+						end
+						r =r - 1
 						if r<1 then 
 							uu:SetAbsOrigin(xuanfeng_positions[1])
 							return
 						end
-						return 0.3
-					end
-					r =r - 1
-					if r<1 then 
+						return 0.01
+					end)
+
+				else
+					Timers:CreateTimer(0.01,function()
 						uu:SetAbsOrigin(xuanfeng_positions[1])
-						return
-					end
-					return 0.01
-				end)
-
-			else
-				Timers:CreateTimer(0.3,function()
-					uu:SetAbsOrigin(xuanfeng_positions[1])
-				end)
-			end
-		end)
-
+					end)
+				end
+			end)
+		end
 	end
 end
 function SwapUnitPosition(u1,u2)
@@ -8900,6 +9123,8 @@ function merge_tower( tower_name, caster )
 		local u = CreateUnitByName(tower_name, p,false,nil,nil,DOTA_TEAM_GOODGUYS) 
 		u.ftd = 2009
 
+		
+
 		--发弹幕
 		ShowCombat({
 			t = 'combine',
@@ -8924,9 +9149,10 @@ function merge_tower( tower_name, caster )
 
 		u:AddAbility("no_hp_bar")
 		u:FindAbilityByName("no_hp_bar"):SetLevel(1)
-		EmitGlobalSound("Loot_Drop_Stinger_Mythical")
+		-- EmitGlobalSound("Loot_Drop_Stinger_Mythical")
 
 		play_merge_particle(u)
+		PlayCombineSound(u)
 
 		--天然祖母绿，获取技能
 		if tower_name == "gemtd_tianranzumulv" then
@@ -8990,7 +9216,6 @@ function merge_tower( tower_name, caster )
 
 				play_particle("particles/econ/items/rubick/rubick_force_ambient/rubick_telekinesis_force.vpcf",PATTACH_OVERHEAD_FOLLOW,u,3)
 				EmitGlobalSound("Hero_Rubick.SpellSteal.Cast")
-
 			end
 		end
 
@@ -9172,9 +9397,10 @@ function merge_tower( tower_name, caster )
 
 		u:AddAbility("no_hp_bar")
 		u:FindAbilityByName("no_hp_bar"):SetLevel(1)
-		EmitGlobalSound("Loot_Drop_Stinger_Mythical")
+		-- EmitGlobalSound("Loot_Drop_Stinger_Mythical")
 
 		play_merge_particle(u)
+		PlayCombineSound(u)
 
 		--天然祖母绿，获取技能
 		if tower_name == "gemtd_tianranzumulv" then
@@ -9354,6 +9580,8 @@ function merge_tower1( tower_name, caster )
 	local u = CreateUnitByName(unit_name, p,false,nil,nil,DOTA_TEAM_GOODGUYS)
 	u.ftd = 2009
 
+	-- PlayCombineSound(u)
+
 	--发弹幕
 	ShowCombat({
 		t = 'combine',
@@ -9379,7 +9607,8 @@ function merge_tower1( tower_name, caster )
 	u:AddAbility("no_hp_bar")
 	u:FindAbilityByName("no_hp_bar"):SetLevel(1)
 	play_merge_particle(u)
-	EmitGlobalSound("Loot_Drop_Stinger_Mythical")
+	PlayCombineSound(u)
+	-- EmitGlobalSound("Loot_Drop_Stinger_Mythical")
 	
 	--添加玩家颜色底盘
 	local particle = ParticleManager:CreateParticle("particles/gem/team_0.vpcf", PATTACH_ABSORIGIN_FOLLOW, u) 
@@ -11011,7 +11240,7 @@ function GemTD:OnConfirmUseBushTicket(keys)
 		return
 	end
 	--通知服务器，门票被用了
-	local url = "http://101.200.189.65:430/gemtd/quest/begin/@"..caster.steam_id.."@q399?hehe="..RandomInt(1,10000)
+	local url = "http://gemtd.ppbizon.com/gemtd/quest/begin/@"..caster.steam_id.."@q399?hehe="..RandomInt(1,10000)
 	local req = CreateHTTPRequestScriptVM("GET", url)
 	req:SetHTTPRequestAbsoluteTimeoutMS(20000)
 	req:Send(function (result)
@@ -11170,11 +11399,7 @@ function GemTD:OnAddBushTicket(keys)
 	show_quest()
 end
 
-function GemTD:OnItemPurchased(keys)
-	local hero = PlayerResource:GetPlayer(keys.PlayerID):GetAssignedHero()
 
-	sync_player_gold(hero)
-end
 
 --判断怪是否位于路径点(合作模式)
 function IsEnemyOnPath(unit)
@@ -11275,7 +11500,7 @@ function ItemPumpkin(keys)
 	end
 
 	--音效特效弹幕
-	EmitGlobalSound('DireTideGameStart.DireSide')
+	EmitGlobalSound('gemtd.item.pumpkin')
 	play_particle("particles/econ/items/riki/riki_head_ti8_gold/riki_smokebomb_ti8_gold_model.vpcf",PATTACH_OVERHEAD_FOLLOW,caster,3)
 	ShowCombat({
 		t = 'item',
@@ -11307,9 +11532,21 @@ function ChangeStoneStyle(unit)
 		if ss == nil then
 			return
 		end
-		unit:SetOriginalModel(ss['stone_model'])
-		unit:SetModel(ss['stone_model'])
+
+		ss_model = ss['stone_model']
+		if string.find(ss_model,',') then
+			ss_array = string.split(ss_model,',')
+			local ran = RandomInt(1,table.maxn(ss_array))
+			ss_model = ss_array[ran]
+		end
+
+		unit:SetOriginalModel(ss_model)
+		unit:SetModel(ss_model)
 		unit:SetModelScale(ss['stone_scale'])
+
+		if ss['stone_random_forward'] == true then
+			unit:SetForwardVector(Vector(RandomFloat(-100,100),RandomFloat(-100,100),0))
+		end
 
 		if ss[rgb] ~= nil then
 			unit:SetRenderColor(ss[rgb][r],ss[rgb][g],ss[rgb][b])
@@ -11556,7 +11793,7 @@ function ItemGreevil(keys)
 	end
 
 	--音效特效弹幕
-	EmitGlobalSound('DireTideGameStart.DireSide')
+	EmitGlobalSound('gemtd.item.greevil')
 	play_particle("particles/econ/items/riki/riki_head_ti8_gold/riki_smokebomb_ti8_gold_model.vpcf",PATTACH_OVERHEAD_FOLLOW,caster,3)
 	ShowCombat({
 		t = 'item',
@@ -11575,7 +11812,7 @@ function ItemShell(keys)
 	end
 
 	--音效特效弹幕
-	EmitGlobalSound('DireTideGameStart.DireSide')
+	EmitGlobalSound('gemtd.item.shell')
 	play_particle("particles/econ/items/riki/riki_head_ti8_gold/riki_smokebomb_ti8_gold_model.vpcf",PATTACH_OVERHEAD_FOLLOW,caster,3)
 	ShowCombat({
 		t = 'item',
@@ -11594,7 +11831,7 @@ function ItemSnow(keys)
 	end
 
 	--音效特效弹幕
-	EmitGlobalSound('DireTideGameStart.DireSide')
+	EmitGlobalSound('gemtd.item.snow')
 	play_particle("particles/econ/items/riki/riki_head_ti8_gold/riki_smokebomb_ti8_gold_model.vpcf",PATTACH_OVERHEAD_FOLLOW,caster,3)
 	ShowCombat({
 		t = 'item',
@@ -11613,7 +11850,7 @@ function ItemBeach(keys)
 	end
 
 	--音效特效弹幕
-	EmitGlobalSound('DireTideGameStart.DireSide')
+	EmitGlobalSound('gemtd.item.beach')
 	play_particle("particles/econ/items/riki/riki_head_ti8_gold/riki_smokebomb_ti8_gold_model.vpcf",PATTACH_OVERHEAD_FOLLOW,caster,3)
 	ShowCombat({
 		t = 'item',
@@ -11632,7 +11869,7 @@ function ItemMushroom(keys)
 	end
 
 	--音效特效弹幕
-	EmitGlobalSound('DireTideGameStart.DireSide')
+	EmitGlobalSound("gemtd.item.mushroom")
 	play_particle("particles/econ/items/riki/riki_head_ti8_gold/riki_smokebomb_ti8_gold_model.vpcf",PATTACH_OVERHEAD_FOLLOW,caster,3)
 	ShowCombat({
 		t = 'item',
@@ -11805,4 +12042,153 @@ function ShowCombat(keys)
 	gameEvent["teamnumber"] = -1
 	gameEvent["message"] = "#text_combat_event_"..combat_type
 	FireGameEvent( "dota_combat_event_message", gameEvent )
+end
+
+function ShowCrown(hero,crown_level)
+	if crown_level == nil then
+		crown_level = 1
+	end
+	if not IsUnitExist(hero) then
+		return
+	end
+	if hero.crown_p ~= nil then
+		ParticleManager:DestroyParticle(hero.crown_p,true)
+	end
+	if hero.is_crown ~= true then
+		return
+	end
+	if crown_level == 1 then
+		hero.crown_p = PlayParticleOnUnitUntilDeath({
+			caster = hero,
+			p = "effect/crown/1.vpcf",
+			pos = PATTACH_ABSORIGIN_FOLLOW,
+		})
+	end
+	if crown_level == 2 then
+		hero.crown_p = PlayParticleOnUnitUntilDeath({
+			caster = hero,
+			p = "effect/crown/2.vpcf",
+			pos = PATTACH_OVERHEAD_FOLLOW,
+		})
+	end
+end
+
+function IsUnitExist(u)
+	if u ~= nil and u:IsNull() == false and u:IsAlive() == true and u.is_removing ~= true then
+		return true
+	else
+		return false
+	end
+end
+
+function PlayParticleOnUnitUntilDeath(keys)
+	local p = keys.p
+	local u = keys.caster
+	if u == nil then
+		return
+	end
+	local pos = keys.pos or PATTACH_ABSORIGIN_FOLLOW
+	local pp = ParticleManager:CreateParticle(p, pos, u)
+	ParticleManager:SetParticleControlEnt( pp, 0, u, pos, nil, u:GetOrigin(), true )
+	ParticleManager:SetParticleControlEnt( pp, 1, u, pos, nil, u:GetOrigin(), true )
+	ParticleManager:SetParticleControlEnt( pp, 2, u, pos, nil, u:GetOrigin(), true )
+	ParticleManager:SetParticleControlEnt( pp, 3, u, pos, nil, u:GetOrigin(), true )
+	ParticleManager:SetParticleControlEnt( pp, 4, u, pos, nil, u:GetOrigin(), true )
+	ParticleManager:SetParticleControlEnt( pp, 5, u, pos, nil, u:GetOrigin(), true )
+	ParticleManager:SetParticleControlEnt( pp, 6, u, pos, nil, u:GetOrigin(), true )
+
+	Timers:CreateTimer(0.1,function()
+		if u == nil or u:IsNull() == true or u:IsAlive() == false then
+			if pp ~= nil then
+				ParticleManager:DestroyParticle(pp,true)
+			end
+			return
+		end
+		if pp == nil then
+			return
+		end
+		return 0.1
+	end)
+
+	return pp
+end
+
+function PlayCombineSound(u)
+	local level = u:GetLevel()
+	if level == nil or level < 3 then
+		level = 3
+	end
+	if level >9 then
+		level = 9
+	end
+	EmitSoundOn("dac.combine."..level,u)
+end
+
+function CostGold(keys)
+	local player_id
+	if keys.caster:GetOwner() == nil then
+		player_id = keys.caster:GetPlayerID()
+	else
+		player_id = keys.caster:GetOwner():GetPlayerID()
+	end
+	
+	local gold_cost = keys.gold_cost
+	if player_id == nil or gold_cost == nil then
+		return false
+	end
+
+	if GetMapName()=="gemtd_race" then
+
+		--竞速模式
+		if GameRules:GetGameModeEntity().team_gold_race[player_id] == nil then
+			GameRules:GetGameModeEntity().team_gold_race[player_id] = 0
+		end
+		if GameRules:GetGameModeEntity().team_gold_race[player_id] < gold_cost then
+			--金币不足
+			CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(player_id),"mima",{
+				text = "text_no_enough_gold"
+			})
+			keys.caster:Stop()
+			return false
+		end
+
+		GameRules:GetGameModeEntity().team_gold_race[player_id] = math.floor(GameRules:GetGameModeEntity().team_gold_race[player_id] - gold_cost)
+		PlayerResource:SetGold(player_id, GameRules:GetGameModeEntity().team_gold_race[player_id], true)
+
+		CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(player_id),"show_money",{ money = GameRules:GetGameModeEntity().team_gold_race[player_id],})
+		return true
+	end
+
+	if GetMapName()=="gemtd_coop" or GetMapName()=="gemtd_1p" then
+		--合作/单人模式
+		if GameRules:GetGameModeEntity().team_gold == nil then
+			GameRules:GetGameModeEntity().team_gold = 0
+		end
+
+		if GameRules:GetGameModeEntity().team_gold < gold_cost then
+			--金币不足
+			CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(player_id),"mima",{
+				text = "text_no_enough_gold"
+			})
+			keys.caster:Stop()
+			return false
+		end
+
+		GameRules:GetGameModeEntity().team_gold = math.floor(GameRules:GetGameModeEntity().team_gold - gold_cost)
+		for i=0, PlayerResource:GetPlayerCount()-1 do
+			PlayerResource:SetGold(i, GameRules:GetGameModeEntity().team_gold, true)
+		end
+
+		CustomNetTables:SetTableValue( "game_state", "gem_team_gold", { gold = GameRules:GetGameModeEntity().team_gold, hehe = RandomInt(1,1000000)} )
+		return true
+	end
+end
+
+function GemTD:OnItemPurchased(keys)
+	local curr_gold = PlayerResource:GetGold(keys.PlayerID)
+
+	if curr_gold < GameRules:GetGameModeEntity().team_gold_race[keys.PlayerID] then
+		GameRules:GetGameModeEntity().team_gold_race[keys.PlayerID] = curr_gold
+	end
+	CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(keys.PlayerID),"show_money",{ money = GameRules:GetGameModeEntity().team_gold_race[keys.PlayerID],})
 end
