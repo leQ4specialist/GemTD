@@ -5141,7 +5141,7 @@
 			{
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-7"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-8"
 				}
 			}
 		}
@@ -5176,7 +5176,7 @@
 			{
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-14"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-15"
 				}
 			}
 		}
@@ -5211,7 +5211,7 @@
 			{
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-21"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-23"
 				}
 			}
 		}
@@ -5246,7 +5246,7 @@
 			{
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-28"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-30"
 				}
 			}
 		}
@@ -5281,7 +5281,7 @@
 			{
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-35"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-38"
 				}
 			}
 		}
@@ -5316,7 +5316,7 @@
 			{
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-42"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-45"
 				}
 			}
 		}
@@ -5351,7 +5351,7 @@
 			{
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-49"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-53"
 				}
 			}
 		}
@@ -5386,7 +5386,7 @@
 			{
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-56"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-60"
 				}
 			}
 		}
@@ -5421,7 +5421,7 @@
 			{
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-63"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-68"
 				}
 			}
 		}
@@ -5457,7 +5457,7 @@
 				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-70"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-75"
 				}
 				"TextureName"	"skywrath_mage_ancient_seal"
 			}
@@ -13396,7 +13396,7 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"konghe_damage_per"	"100"
+				"konghe_damage_per"	"80"
 			}
 			"03"
 			{
@@ -13482,7 +13482,7 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"konghe_damage_per"	"200"
+				"konghe_damage_per"	"160"
 			}
 			"03"
 			{
@@ -13568,7 +13568,7 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"konghe_damage_per"	"300"
+				"konghe_damage_per"	"240"
 			}
 			"03"
 			{
