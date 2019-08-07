@@ -75,7 +75,7 @@
 		"AbilityCooldown"	"0.5"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
-		"AbilityChannelTime"	"0.5"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"soundfile"	"soundevents/game_sounds_ui.vsndevts"
@@ -104,18 +104,19 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"enchantress_natures_attendants"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"10"
 		"AbilityManaCost"	"0"
-		"AbilityChannelTime"	"0.00"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"particle"	"particles/econ/items/enchantress/enchantress_lodestar/ench_lodestar_death.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -133,6 +134,21 @@
 				"ModifierName"	"modifier_gemtd_hero_huichun"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
 		"Modifiers"
 		{
 			"modifier_gemtd_hero_huichun"
@@ -143,21 +159,33 @@
 				"EffectAttachType"	"follow_origin"
 				"EffectName"	"particles/econ/items/enchantress/enchantress_lodestar/ench_lodestar_death.vpcf"
 			}
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"min_heal"	"1"
+				"cost"	"400"
 			}
 			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"min_heal"	"1"
+			}
+			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"max_heal"	"10 13 15 16"
 			}
 		}
-		"AbilityGoldCost"	"400"
 	}
 
 	"no_hp_bar"
@@ -282,14 +310,16 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/gemtd_downgrade_stone3"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"HotKeyOverride"	"E"
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"0"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"0"
 		"AbilityManaCost"	"0"
+		"AbilityChannelTime"	"0.2"
 		// 事件：开始施放技能
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			// 动作：运行脚本
 			"RunScript"
@@ -302,22 +332,57 @@
 				"Function"	"gemtd_downgrade_stone"
 			}
 		}
-		"AbilityGoldCost"	"200"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"cost"	"200"
+			}
+		}
 	}
 
 	"gemtd_downgrade_stone_fengbaozhichui"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"sven_storm_bolt"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"HotKeyOverride"	"E"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"0"
 		"AbilityManaCost"	"0"
+		"AbilityChannelTime"	"0.2"
 		// 事件：开始施放技能
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			// 动作：运行脚本
 			"RunScript"
@@ -330,7 +395,40 @@
 				"Function"	"gemtd_downgrade_stone_fengbaozhichui"
 			}
 		}
-		"AbilityGoldCost"	"250 150 100 75"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"cost"	"250 150 100 75"
+			}
+		}
 	}
 
 	"gemtd_guai_base"
@@ -4333,7 +4431,7 @@
 					"Damage"
 					{
 						"Type"	"DAMAGE_TYPE_MAGICAL"
-						"Damage"	"6000"
+						"Damage"	"7000"
 						"Target"	"TARGET"
 					}
 					"AttachEffect"
@@ -5854,17 +5952,19 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"puck_phase_shift"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET| DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
-		"AbilityCastPoint"	"0.01"
+		"AbilityCastPoint"	"0"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"60"
 		"AbilityManaCost"	"0"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"particle"	"particles/items3_fx/lotus_orb_reflect.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -5879,6 +5979,21 @@
 				"Duration"	"3"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
 		"Modifiers"
 		{
 			"modifier_gemtd_hero_shanbi"
@@ -5888,38 +6003,52 @@
 				"EffectAttachType"	"follow_overhead"
 				"IsHidden"	"1"
 			}
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"possibility"	"10 15 20 25"
+				"cost"	"200"
 			}
 			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"possibility"	"10 15 20 25"
+			}
+			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"last_time"	"60"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_shouhu"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"omniknight_guardian_angel"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"60"
 		"AbilityManaCost"	"0"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"particle"	"particles/units/heroes/hero_omniknight/omniknight_guardian_angel_omni.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -5934,6 +6063,21 @@
 				"Duration"	"3"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
 		"Modifiers"
 		{
 			"modifier_gemtd_hero_shouhu"
@@ -5943,40 +6087,80 @@
 				"EffectAttachType"	"follow_overhead"
 				"Duration"	"3"
 			}
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"shouhu_amount"	"1 2 3 4"
+				"cost"	"300"
 			}
 			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"shouhu_amount"	"1 2 3 4"
+			}
+			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"last_time"	"60"
 			}
 		}
-		"AbilityGoldCost"	"300"
 	}
 
 	"gemtd_hero_huidaoguoqu"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"weaver_time_lapse"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"10"
 		"AbilityManaCost"	"0"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
 				"Target"	"CASTER"
 				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
 				"Function"	"gemtd_hero_huidaoguoqu"
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
 			}
 		}
 		"AbilitySpecial"
@@ -5987,20 +6171,21 @@
 				"cost"	"600 500 400 300"
 			}
 		}
-		"AbilityGoldCost"	"600 500 400 300"
 	}
 
 	"gemtd_hero_shitou"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"earthshaker_fissure_alt"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"5"
 		"AbilityManaCost"	"0"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -6009,42 +6194,68 @@
 				"Function"	"gemtd_hero_shitou"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"50"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"stone_max_count"	"4 8 12 16"
 			}
 		}
-		"AbilityGoldCost"	"50"
 	}
 
 	"gemtd_hero_xuanfeng"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"invoker_tornado"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
-		"AbilityCastPoint"	"0.01"
+		"AbilityCastPoint"	"0"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"5"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
+		"AbilityChannelTime"	"0.2"
 		"AOERadius"	"180"
 		"precache"
 		{
 			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_furion.vsndevts"
 			"particle"	"particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_torrent_bubbles_swirl_center_fxset.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
-			"RunScript"
-			{
-				"Target"	"POINT"
-				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
-				"Function"	"gemtd_hero_xuanfeng"
-			}
 			"CreateThinker"
 			{
 				"Target"	"POINT"
@@ -6054,6 +6265,27 @@
 			{
 				"Target"	"CASTER"
 				"EffectName"	"Hero_Furion.WrathOfNature_Cast"
+			}
+			"RunScript"
+			{
+				"Target"	"POINT"
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"gemtd_hero_xuanfeng"
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
 			}
 		}
 		"Modifiers"
@@ -6070,6 +6302,14 @@
 					}
 				}
 			}
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
@@ -6079,20 +6319,21 @@
 				"cost"	"200 125 75 50"
 			}
 		}
-		"AbilityGoldCost"	"200 125 75 50"
 	}
 
 	"gemtd_hero_lanse"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"invoker_quas"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -6101,28 +6342,60 @@
 				"Function"	"gemtd_hero_lanse"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"200"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"40 55 65 70"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_danbai"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"invoker_wex"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -6131,28 +6404,60 @@
 				"Function"	"gemtd_hero_danbai"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"200"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"40 55 65 70"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_baise"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"omniknight_repel"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -6161,28 +6466,60 @@
 				"Function"	"gemtd_hero_baise"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"200"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"40 55 65 70"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_hongse"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"phoenix_supernova"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -6191,28 +6528,60 @@
 				"Function"	"gemtd_hero_hongse"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"200"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"40 55 65 70"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_lvse"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"medusa_mana_shield"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -6221,28 +6590,60 @@
 				"Function"	"gemtd_hero_lvse"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"200"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"40 55 65 70"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_fense"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"tidehunter_gush"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -6251,35 +6652,67 @@
 				"Function"	"gemtd_hero_fense"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"200"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"40 55 65 70"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_kuaisusheji"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"windrunner_focusfire"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"5"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"particle"	"particles/econ/items/windrunner/windrunner_cape_sparrowhawk/windrunner_windrun_sparrowhawk.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"ApplyModifier"
 			{
@@ -6294,6 +6727,21 @@
 				"Function"	"gemtd_hero_kuaisusheji"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
 		"Modifiers"
 		{
 			"modifier_gemtd_hero_kuaisusheji"
@@ -6306,43 +6754,57 @@
 				"EffectName"	"particles/econ/items/windrunner/windrunner_cape_sparrowhawk/windrunner_windrun_sparrowhawk.vpcf"
 				"EffectAttachType"	"follow_origin"
 			}
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"attack_speed"	"60 80 100 120"
+				"cost"	"200"
 			}
 			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"attack_speed"	"60 80 100 120"
+			}
+			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"last_time"	"60"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_baoji"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"phantom_assassin_phantom_strike"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"5"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"particle"	"particles/econ/items/bloodseeker/bloodseeker_eztzhok_weapon/bloodseeker_bloodrage_ground_eztzhok.vpcf"
 			"particle"	"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
 			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"ApplyModifier"
 			{
@@ -6355,6 +6817,21 @@
 				"Target"	"CASTER"
 				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
 				"Function"	"gemtd_hero_baoji"
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
 			}
 		}
 		"Modifiers"
@@ -6418,41 +6895,55 @@
 					}
 				}
 			}
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"baoji"	"500 600 700 800"
+				"cost"	"200"
 			}
 			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"baoji"	"500 600 700 800"
+			}
+			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"last_time"	"60"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_miaozhun"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"sniper_assassinate"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"5"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"particle"	"particles/gem/sniper_crosshair.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"ApplyModifier"
 			{
@@ -6465,6 +6956,21 @@
 				"Target"	"CASTER"
 				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
 				"Function"	"gemtd_hero_miaozhun"
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
 			}
 		}
 		"Modifiers"
@@ -6480,43 +6986,83 @@
 				"EffectAttachType"	"follow_overhead"
 				"States"	{}
 			}
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
+				"var_type"	"FIELD_INTEGER"
+				"cost"	"100"
+			}
+			"02"
+			{
 				"var_type"	"FIELD_FLOAT"
 				"juli"	"1000 1200 1400 1600"
 			}
-			"02"
+			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"last_time"	"60"
 			}
 		}
-		"AbilityGoldCost"	"100"
 	}
 
 	"gemtd_hero_yixinghuanwei"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"vengefulspirit_nether_swap"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
 				"Target"	"TARGET"
 				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
 				"Function"	"gemtd_hero_yixinghuanwei"
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
 			}
 		}
 		"AbilitySpecial"
@@ -6527,29 +7073,56 @@
 				"cost"	"375 275 225 200"
 			}
 		}
-		"AbilityGoldCost"	"375 275 225 200"
 	}
 
 	"gemtd_hero_qingyi"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"courier_transfer_items"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"5"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
 				"Target"	"TARGET"
 				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
 				"Function"	"gemtd_hero_qingyi"
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
 			}
 		}
 		"AbilitySpecial"
@@ -6560,7 +7133,6 @@
 				"cost"	"275 175 125 100"
 			}
 		}
-		"AbilityGoldCost"	"275 175 125 100"
 	}
 
 	"gemtd_hero_fengbaozhichui"
@@ -6584,16 +7156,18 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"huskar_berserkers_blood"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"5"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -6602,25 +7176,55 @@
 				"Function"	"gemtd_hero_beishuiyizhan"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"begin"	"30"
+				"cost"	"200"
 			}
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"start"	"50 60 70 80"
+				"begin"	"30"
 			}
 			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"start"	"50 60 70 80"
+			}
+			"04"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"duration"	"60"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_beishuiyizhan_unit1"
@@ -6831,13 +7435,15 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"bane_nightmare"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -6846,28 +7452,60 @@
 				"Function"	"gemtd_hero_zise"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"200"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"40 55 65 70"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_huangse"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"invoker_exort"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
-		"OnSpellStart"
+		"AbilityChannelTime"	"0.2"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -6876,15 +7514,45 @@
 				"Function"	"gemtd_hero_huangse"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"200"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"40 55 65 70"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"tower_aojiao"
@@ -7130,7 +7798,7 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"damage_cleanse"	"40000 60000 80000 100000"
+				"damage_cleanse"	"80000 120000 160000 200000"
 			}
 			"03"
 			{
@@ -7181,7 +7849,7 @@
 				"Passive"	"1"
 				"IsHidden"	"1"
 				"Aura"	"modifier_guai_chenmo_buff"
-				"Aura_Radius"	"130 150 170 190"
+				"Aura_Radius"	"150 170 190 210"
 				"Aura_Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_RANGED_ONLY"
@@ -7367,17 +8035,19 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/gemtd_hero_putong"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"particle"	"particles/items3_fx/warmage_mana.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -7392,6 +8062,21 @@
 				"ModifierName"	"modifier_gemtd_hero_putong"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
 		"Modifiers"
 		{
 			"modifier_gemtd_hero_putong"
@@ -7400,33 +8085,47 @@
 				"EffectName"	"particles/items3_fx/warmage_mana.vpcf"
 				"EffectAttachType"	"attach_origin"
 			}
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"200"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"50 65 75 80"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"gemtd_hero_wuxia"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/gemtd_hero_wuxia"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"particle"	"particles/items3_fx/warmage_mana.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -7441,6 +8140,21 @@
 				"ModifierName"	"modifier_gemtd_hero_wuxia"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
 		"Modifiers"
 		{
 			"modifier_gemtd_hero_wuxia"
@@ -7449,33 +8163,50 @@
 				"EffectName"	"particles/items3_fx/warmage_mana.vpcf"
 				"EffectAttachType"	"attach_origin"
 			}
+			"Modifiers"
+			{
+				"modifier_gemtd_out_of_control"
+				{
+					"Properties"	{}
+					"States"
+					{
+						"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+					}
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"300"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"29 41 47 50"
 			}
 		}
-		"AbilityGoldCost"	"300"
 	}
 
 	"gemtd_hero_wanmei"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/gemtd_hero_wanmei"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"MaxLevel"	"4"
 		"LevelsBetweenUpgrades"	"1"
 		"AbilityCastPoint"	"0.01"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"3"
 		"AbilityManaCost"	"0"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"particle"	"particles/items3_fx/warmage_mana.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -7490,6 +8221,21 @@
 				"ModifierName"	"modifier_gemtd_hero_wanmei"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
 		"Modifiers"
 		{
 			"modifier_gemtd_hero_wanmei"
@@ -7498,16 +8244,31 @@
 				"EffectName"	"particles/items3_fx/warmage_mana.vpcf"
 				"EffectAttachType"	"attach_origin"
 			}
+			"Modifiers"
+			{
+				"modifier_gemtd_out_of_control"
+				{
+					"Properties"	{}
+					"States"
+					{
+						"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+					}
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"cost"	"400"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
 				"gailv"	"6 14 18 20"
 			}
 		}
-		"AbilityGoldCost"	"400"
 	}
 
 	"silence_self"
@@ -12919,20 +13680,22 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"roshan_halloween_candy"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"5"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
 		"AbilityCastRangeBuffer"	"0"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
 			"particle"	"particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"RunScript"
 			{
@@ -12951,6 +13714,21 @@
 				"EffectName"	"Hero_Omniknight.Purification"
 			}
 		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
+			}
+		}
 		"Modifiers"
 		{
 			"modifier_gemtd_hero_guangzhudaobiao"
@@ -12965,16 +13743,23 @@
 					}
 				}
 			}
+			"modifier_gemtd_out_of_control"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"AbilityGoldCost"	"375 300 250 225"
+				"cost"	"375 300 250 225"
 			}
 		}
-		"AbilityGoldCost"	"375 300 250 225"
 	}
 
 	"shredder_reactive_armor"
@@ -12993,27 +13778,50 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"warlock_fatal_bonds"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_RANGED_ONLY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
 		"AbilityCooldown"	"5"
 		"AbilityManaCost"	"0"
 		"AbilityCastRange"	"500"
+		"AbilityChannelTime"	"0.2"
 		"precache"
 		{
 			"particle"	"particles/units/heroes/hero_warlock/warlock_fatal_bonds_icon.vpcf"
 		}
-		"OnSpellStart"
+		"OnChannelSucceeded"
 		{
 			"ApplyModifier"
 			{
 				"Target"	"TARGET"
 				"ModifierName"	"modifier_gemtd_hero_lianjie"
 				"Duration"	"90"
+			}
+			"RunScript"
+			{
+				"Target"	"CASTER"
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"gemtd_zhiminglianjie"
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"CostGold"
+				"gold_cost"	"%cost"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_gemtd_out_of_control"
+				"Duration"	"0.2"
 			}
 		}
 		"Modifiers"
@@ -13037,26 +13845,41 @@
 					}
 				}
 			}
+			"Modifiers"
+			{
+				"modifier_gemtd_out_of_control"
+				{
+					"Properties"	{}
+					"States"
+					{
+						"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+					}
+				}
+			}
 		}
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"damage_per"	"70 80 90 100"
+				"cost"	"200"
 			}
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"damage_plus_per_200m"	"10"
+				"damage_per"	"70 80 90 100"
 			}
 			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"damage_plus_per_200m"	"10"
+			}
+			"04"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"duration"	"90"
 			}
 		}
-		"AbilityGoldCost"	"200"
 	}
 
 	"enemy_zheguang"
@@ -14642,6 +15465,34 @@
 			{
 				"var_type"	"FIELD_INTEGER"
 				"fiend_grip_damage"	"0"
+			}
+		}
+	}
+
+	"mars_bulwark"
+	{
+		"MaxLevel"	"4"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"physical_damage_reduction"	"70 80 90 100"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"forward_angle"	"90"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"physical_damage_reduction_side"	"30 40 50 60"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"side_angle"	"180"
 			}
 		}
 	}
