@@ -7792,18 +7792,22 @@
 		{
 			"01"
 			{
-				"var_type"	"FIELD_INTEGER"
-				"damage_reduction"	"0 0 0 0"
+				"var_type"				"FIELD_INTEGER"
+				"damage_reduction"		"0 0 0 0"
+				"LinkedSpecialBonus"	"special_bonus_unique_tidehunter_4"
+				"CalculateSpellDamageTooltip"	"0"
 			}
 			"02"
 			{
-				"var_type"	"FIELD_INTEGER"
-				"damage_cleanse"	"80000 120000 160000 200000"
+				"var_type"				"FIELD_INTEGER"
+				"damage_cleanse"		"80000 120000 160000 200000"
+				"CalculateSpellDamageTooltip"	"0"
 			}
 			"03"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"				"FIELD_FLOAT"
 				"damage_reset_interval"	"10"
+				"CalculateSpellDamageTooltip"	"0"
 			}
 		}
 	}
