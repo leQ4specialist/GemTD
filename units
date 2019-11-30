@@ -2723,7 +2723,7 @@
 		// Name of sound set.
 		"SoundSet"	"Undying_Zombie"
 		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
-		"ModelScale"	"3.6"
+		"ModelScale"	"3.8"
 		"Level"	"20"
 		"IsAncient"	"1"
 		// Abilities
@@ -2779,7 +2779,7 @@
 		// Bounds
 		// ----------------------------------------------------------------
 		"RingRadius"	"70"
-		"HealthBarOffset"	"160"
+		"HealthBarOffset"	"300"
 		"BoundsHullName"	"DOTA_HULL_SIZE_SMALL"
 		// Movement
 		// ----------------------------------------------------------------
@@ -6870,19 +6870,19 @@
 	}
 
 	// 40
-	"gemtd_moke_boss_fly"
+	"gemtd_nanguaren_boss_fly"
 	{
 		// General
 		//
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creature"
 		// Model.
-		"Model"	"models/items/courier/mok/mok_flying.vmdl"
+		"Model"	"models/items/courier/pumpkin_courier/pumpkin_courier_flying.vmdl"
 		// Name of sound set.
 		"SoundSet"	"Undying_Zombie"
 		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
 		"ModelScale"	"5"
-		"Level"	"43"
+		"Level"	"40"
 		"IsAncient"	"0"
 		// Abilities
 		// ----------------------------------------------------------------
@@ -6901,13 +6901,13 @@
 		// Ability 7 - Extra.
 		"Ability7"	""
 		// Ability 8 - Extra.
-		"Ability8"	"tidehunter_kraken_shell"
+		"Ability8"	""
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"30"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -6915,7 +6915,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"660000"
+		"StatusHealth"	"400000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -6944,7 +6944,7 @@
 		// Type of locomotion - ground, air
 		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_FLY"
 		// Speed
-		"MovementSpeed"	"600"
+		"MovementSpeed"	"800"
 		// Turning rate.
 		"MovementTurnRate"	"10"
 		"FollowRange"	"0"
@@ -9324,7 +9324,7 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creature"
 		// Model.
-		"Model"	"models/items/furion/treant/defender_of_the_jungle_lakad_coconut/defender_of_the_jungle_lakad_coconut.vmdl"
+		"Model"	"models/items/furion/treant/hallowed_horde/hallowed_horde.vmdl"
 		// "Model"	"models/props_tree/tree_oak_00.vmdl"
 		// "Model"	"models/items/furion/treant/hallowed_horde/hallowed_horde.vmdl"
 		// Name of sound set.
@@ -15715,16 +15715,16 @@
 		"AttackDamageMax"	"1369"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
-		"AttackRate"	"1"
+		"AttackRate"	"0.8"
 		// Normalized time in animation cycle to attack.
 		"AttackAnimationPoint"	"0"
 		// Range within a target can be acquired.
 		"AttackAcquisitionRange"	"1500"
 		// Range within a target can be attacked.
 		"AttackRange"	"800"
-		"ProjectileModel"	"particles/econ/items/vengeful/vs_ti8_immortal_shoulder/vs_ti8_immortal_magic_missle.vpcf"
+		"ProjectileModel"	"particles/items4_fx/nullifier_proj.vpcf"
 		// Speed of projectile.
-		"ProjectileSpeed"	"2000"
+		"ProjectileSpeed"	"3000"
 		// Attributes
 		// ----------------------------------------------------------------
 		"AttributePrimary"	"DOTA_ATTRIBUTE_STRENGTH"
@@ -19561,7 +19561,7 @@
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
 		"Level"	"8"
-		"skin"	"0"
+		"skin"	"1"
 		// Abilities
 		// ----------------------------------------------------------------
 		// Ability 1.
@@ -19602,7 +19602,7 @@
 		"AttackAcquisitionRange"	"700"
 		// Range within a target can be attacked.
 		"AttackRange"	"800"
-		"ProjectileModel"	"particles/units/heroes/hero_lion/lion_spell_finger_of_death.vpcf"
+		"ProjectileModel"	"particles/units/heroes/hero_skywrath_mage/skywrath_mage_arcane_bolt.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
 		// Attributes
@@ -19860,7 +19860,7 @@
 		"AttackAcquisitionRange"	"2000"
 		// Range within a target can be attacked.
 		"AttackRange"	"1600"
-		"ProjectileModel"	"particles/units/heroes/hero_tinker/tinker_laser.vpcf"
+		"ProjectileModel"	"particles/econ/items/shadow_fiend/sf_desolation/sf_base_attack_desolation_fire_arcana.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
 		// Attributes
@@ -19931,6 +19931,7 @@
 		"Ability14"	""
 		"Ability15"	""
 		"Ability16"	""
+		"Skin"	"1"
 	}
 
 	// =================================================================================
@@ -19989,7 +19990,7 @@
 		"AttackAcquisitionRange"	"5000"
 		// Range within a target can be attacked.
 		"AttackRange"	"5000"
-		"ProjectileModel"	"particles/units/heroes/hero_lina/lina_base_attack.vpcf"
+		"ProjectileModel"	"particles/econ/items/witch_doctor/wd_monkey/witchdoctor_cask_monkey.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
 		// Attributes
@@ -20060,6 +20061,7 @@
 		"Ability14"	""
 		"Ability15"	""
 		"Ability16"	""
+		"Skin"	"1"
 	}
 
 	// =================================================================================
@@ -20246,7 +20248,7 @@
 		"AttackAcquisitionRange"	"1200"
 		// Range within a target can be attacked.
 		"AttackRange"	"1000"
-		"ProjectileModel"	"particles/econ/events/ti5/dagon_ti5.vpcf"
+		"ProjectileModel"	"particles/winter_fx/winter_present_projectile.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
 		// Attributes
@@ -20317,6 +20319,7 @@
 		"Ability14"	""
 		"Ability15"	""
 		"Ability16"	""
+		"Skin"	"1"
 	}
 
 	// =================================================================================
@@ -20465,7 +20468,7 @@
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
 		"Level"	"8"
-		"skin"	"0"
+		"skin"	"1"
 		// Abilities
 		// ----------------------------------------------------------------
 		// Ability 1.
@@ -20596,7 +20599,7 @@
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
 		"Level"	"8"
-		"skin"	"0"
+		"skin"	"1"
 		// Abilities
 		// ----------------------------------------------------------------
 		// Ability 1.
@@ -20630,14 +20633,14 @@
 		"AttackDamageMax"	"120"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
-		"AttackRate"	"1"
+		"AttackRate"	"0.8"
 		// Normalized time in animation cycle to attack.
 		"AttackAnimationPoint"	"0"
 		// Range within a target can be acquired.
 		"AttackAcquisitionRange"	"1600"
 		// Range within a target can be attacked.
 		"AttackRange"	"1200"
-		"ProjectileModel"	"particles/items2_fx/skadi_projectile.vpcf"
+		"ProjectileModel"	"particles/econ/items/lich/lich_ti8_immortal_arms/lich_ti8_chain_frost.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
 		// Attributes
@@ -20855,7 +20858,7 @@
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
 		"Level"	"7"
-		"skin"	"0"
+		"skin"	"1"
 		// Abilities
 		// ----------------------------------------------------------------
 		// Ability 1.
@@ -20896,9 +20899,9 @@
 		"AttackAcquisitionRange"	"1200"
 		// Range within a target can be attacked.
 		"AttackRange"	"800"
-		"ProjectileModel"	"particles/units/heroes/hero_skywrath_mage/skywrath_mage_arcane_bolt_birds.vpcf"
+		"ProjectileModel"	"particles/econ/items/skywrath_mage/skywrath_ti9_immortal_back/skywrath_mage_ti9_arcane_bolt.vpcf"
 		// Speed of projectile.
-		"ProjectileSpeed"	"1500"
+		"ProjectileSpeed"	"3000"
 		// Attributes
 		// ----------------------------------------------------------------
 		"AttributePrimary"	"DOTA_ATTRIBUTE_STRENGTH"
@@ -21101,7 +21104,7 @@
 		//
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creature"
-		"Model"	"models/items/wards/esl_wardchest_ward_of_foresight/esl_wardchest_ward_of_foresight.vmdl"
+		"Model"	"models/items/wards/ti9_totem_ward/ti9_totem_ward.vmdl"
 		"ModelScale"	"2.6"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
@@ -21148,7 +21151,7 @@
 		"AttackAcquisitionRange"	"1400"
 		// Range within a target can be attacked.
 		"AttackRange"	"1000"
-		"ProjectileModel"	"particles/units/heroes/hero_lina/lina_spell_laguna_blade.vpcf"
+		"ProjectileModel"	"particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
 		// Attributes
@@ -21228,8 +21231,8 @@
 		//
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creature"
-		"Model"	"models/items/wards/tink/tink.vmdl"
-		"ModelScale"	"2.3"
+		"Model"	"models/items/wards/ward_clockwerk_watcher/ward_clockwerk_watcher.vmdl"
+		"ModelScale"	"2.6"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -21355,8 +21358,8 @@
 		//
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creature"
-		"Model"	"models/items/wards/chicken_hut_ward/chicken_hut_ward.vmdl"
-		"ModelScale"	"2.7"
+		"Model"	"models/items/wards/sylph_ward/sylph_ward.vmdl"
+		"ModelScale"	"2.3"
 		// Name of sound set.
 		"SoundSet"	"Hero_Lina"
 		"MinimapIcon"	"minimap_creep"
@@ -21402,7 +21405,7 @@
 		"AttackAcquisitionRange"	"1400"
 		// Range within a target can be attacked.
 		"AttackRange"	"800"
-		"ProjectileModel"	"particles/units/heroes/hero_zuus/zuus_base_attack.vpcf"
+		"ProjectileModel"	"particles/econ/items/drow/drow_ti9_immortal/drow_ti9_marksman_frost.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
 		// Attributes
@@ -21790,7 +21793,7 @@
 		"AttackAcquisitionRange"	"1000"
 		// Range within a target can be attacked.
 		"AttackRange"	"500"
-		"ProjectileModel"	"particles/items2_fx/skadi_projectile.vpcf"
+		"ProjectileModel"	"particles/econ/events/snowball/snowball_projectile.vpcf"
 		// Speed of projectile.
 		"ProjectileSpeed"	"3000"
 		// Attributes
