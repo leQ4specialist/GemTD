@@ -6,6 +6,112 @@
 	"Version"		"1"
 
 	// 1
+	"gemtd_pet"
+	{
+		// General
+		//
+		// Cl ass of entity of link to.
+		"BaseClass"	"npc_dota_creature"
+		// Model.
+		"Model"	"models/courier/mighty_boar/mighty_boar.vmdl"
+		// Name of sound set.
+		"SoundSet"	"Undying_Zombie"
+		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
+		"ModelScale"	"1.1"
+		"Level"	"1"
+		"IsAncient"	"1"
+		// Abilities
+		// ----------------------------------------------------------------
+		// Ability 1.
+		"Ability1"	"no_hp_bar"
+		// Ability 2.
+		"Ability2"	"no_pengzhuang"
+		// Ability 3.
+		"Ability3"	"no_selectable"
+		// Ability 4.
+		"Ability4"	""
+		// Ability 5.
+		"Ability5"	""
+		// Ability 6 - Extra.
+		"Ability6"	""
+		// Ability 7 - Extra.
+		"Ability7"	""
+		// Ability 8 - Extra.
+		"Ability8"	""
+		// Armor
+		// ----------------------------------------------------------------
+		// Physical protection.
+		"ArmorPhysical"	"0"
+		// Magical protection.
+		"MagicalResistance"	"0"
+		// Attack
+		// ----------------------------------------------------------------
+		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
+		"DisableClumpingBehavior"	"0"
+		// Status
+		// ----------------------------------------------------------------
+		// Base health.
+		"StatusHealth"	"1"
+		// Health regeneration rate.
+		"StatusHealthRegen"	"0"
+		// Base mana.
+		"StatusMana"	"0"
+		// Mana regeneration rate.
+		"StatusManaRegen"	"0"
+		"HasAggressiveStance"	"1"
+		// Bounty
+		// ----------------------------------------------------------------
+		// Experience earn.
+		"BountyXP"	"0"
+		// Gold earned min.
+		"BountyGoldMin"	"0"
+		// Gold earned max.
+		"BountyGoldMax"	"0"
+		"SoundSet"	"Hero_ChaosKnight"
+		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
+		"IdleSoundLoop"	"Hero_ChaosKnight.Tutorial_Intro"
+		// Bounds
+		// ----------------------------------------------------------------
+		"RingRadius"	"70"
+		"HealthBarOffset"	"160"
+		"BoundsHullName"	"DOTA_HULL_SIZE_SMALL"
+		// Movement
+		// ----------------------------------------------------------------
+		// Type of locomotion - ground, air
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		// Speed
+		"MovementSpeed"	"400"
+		// Turning rate.
+		"MovementTurnRate"	"10"
+		"FollowRange"	"0"
+		// Team
+		// ----------------------------------------------------------------
+		// Team name.
+		"TeamName"	"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		// Vision
+		// ----------------------------------------------------------------
+		// Range of vision during day light.
+		"VisionDaytimeRange"	"0"
+		// Range of vision at night time.
+		"VisionNighttimeRange"	"0"
+		"MinimapIcon"	"minimap_courier"
+		"MinimapIconSize"	"512"
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+		"AttackDamageMin"	"0"
+		"AttackDamageMax"	"0"
+	}
+
+	// 1
 	"gemtd_kuangbaoyezhu"
 	{
 		// General
@@ -43,7 +149,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -96,7 +202,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -107,112 +213,6 @@
 		"Ability14"	""
 		"Ability15"	""
 		"Ability16"	""
-	}
-
-	// 1
-	"gemtd_pet"
-	{
-		// General
-		//
-		// Cl ass of entity of link to.
-		"BaseClass"	"npc_dota_creature"
-		// Model.
-		"Model"	"models/courier/mighty_boar/mighty_boar.vmdl"
-		// Name of sound set.
-		"SoundSet"	"Undying_Zombie"
-		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
-		"ModelScale"	"1.1"
-		"Level"	"1"
-		"IsAncient"	"1"
-		// Abilities
-		// ----------------------------------------------------------------
-		// Ability 1.
-		"Ability1"	"no_hp_bar"
-		// Ability 2.
-		"Ability2"	"no_pengzhuang"
-		// Ability 3.
-		"Ability3"	"no_selectable"
-		// Ability 4.
-		"Ability4"	""
-		// Ability 5.
-		"Ability5"	""
-		// Ability 6 - Extra.
-		"Ability6"	""
-		// Ability 7 - Extra.
-		"Ability7"	""
-		// Ability 8 - Extra.
-		"Ability8"	""
-		// Armor
-		// ----------------------------------------------------------------
-		// Physical protection.
-		"ArmorPhysical"	"0"
-		// Magical protection.
-		"MagicalResistance"	"10"
-		// Attack
-		// ----------------------------------------------------------------
-		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
-		"DisableClumpingBehavior"	"0"
-		// Status
-		// ----------------------------------------------------------------
-		// Base health.
-		"StatusHealth"	"1"
-		// Health regeneration rate.
-		"StatusHealthRegen"	"0"
-		// Base mana.
-		"StatusMana"	"0"
-		// Mana regeneration rate.
-		"StatusManaRegen"	"0"
-		"HasAggressiveStance"	"1"
-		// Bounty
-		// ----------------------------------------------------------------
-		// Experience earn.
-		"BountyXP"	"0"
-		// Gold earned min.
-		"BountyGoldMin"	"0"
-		// Gold earned max.
-		"BountyGoldMax"	"0"
-		"SoundSet"	"Hero_ChaosKnight"
-		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
-		"IdleSoundLoop"	"Hero_ChaosKnight.Tutorial_Intro"
-		// Bounds
-		// ----------------------------------------------------------------
-		"RingRadius"	"70"
-		"HealthBarOffset"	"160"
-		"BoundsHullName"	"DOTA_HULL_SIZE_SMALL"
-		// Movement
-		// ----------------------------------------------------------------
-		// Type of locomotion - ground, air
-		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
-		// Speed
-		"MovementSpeed"	"400"
-		// Turning rate.
-		"MovementTurnRate"	"10"
-		"FollowRange"	"0"
-		// Team
-		// ----------------------------------------------------------------
-		// Team name.
-		"TeamName"	"DOTA_TEAM_NEUTRALS"
-		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
-		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_SOFT"
-		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-		// Vision
-		// ----------------------------------------------------------------
-		// Range of vision during day light.
-		"VisionDaytimeRange"	"1000"
-		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
-		"MinimapIcon"	"minimap_courier"
-		"MinimapIconSize"	"512"
-		"Ability9"	""
-		"Ability10"	""
-		"Ability11"	""
-		"Ability12"	""
-		"Ability13"	""
-		"Ability14"	""
-		"Ability15"	""
-		"Ability16"	""
-		"AttackDamageMin"	"0"
-		"AttackDamageMax"	"0"
 	}
 
 	// 2
@@ -253,7 +253,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -290,7 +290,7 @@
 		// Type of locomotion - ground, air
 		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
 		// Speed
-		"MovementSpeed"	"600"
+		"MovementSpeed"	"700"
 		// Turning rate.
 		"MovementTurnRate"	"10"
 		"FollowRange"	"0"
@@ -306,7 +306,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -357,7 +357,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -410,7 +410,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -459,9 +459,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -514,7 +514,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -565,7 +565,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -618,7 +618,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -669,7 +669,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -722,7 +722,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -771,9 +771,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -826,7 +826,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -875,9 +875,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -930,7 +930,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -979,9 +979,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -1034,7 +1034,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -1083,9 +1083,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -1138,7 +1138,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -1187,9 +1187,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -1242,7 +1242,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -1291,9 +1291,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"5"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-10"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -1346,7 +1346,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -1371,7 +1371,7 @@
 		// Name of sound set.
 		"SoundSet"	"Undying_Zombie"
 		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
-		"ModelScale"	"1.4"
+		"ModelScale"	"1.5"
 		"Level"	"11"
 		"IsAncient"	"1"
 		// Abilities
@@ -1395,9 +1395,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -1405,7 +1405,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"300"
+		"StatusHealth"	"400"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -1450,7 +1450,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -1499,9 +1499,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"20"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -1554,7 +1554,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -1603,9 +1603,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -1658,7 +1658,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -1707,9 +1707,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -1762,7 +1762,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -1811,9 +1811,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -1866,7 +1866,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -1915,9 +1915,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -1970,7 +1970,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -2019,9 +2019,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -2074,7 +2074,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -2123,9 +2123,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"50"
+		"MagicalResistance"	"40"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -2178,7 +2178,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -2227,9 +2227,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -2282,7 +2282,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -2307,7 +2307,7 @@
 		// Name of sound set.
 		"SoundSet"	"Undying_Zombie"
 		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
-		"ModelScale"	"1.45"
+		"ModelScale"	"1.5"
 		"Level"	"19"
 		"IsAncient"	"1"
 		// Abilities
@@ -2331,9 +2331,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -2341,7 +2341,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"2800"
+		"StatusHealth"	"3200"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -2386,7 +2386,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -2435,9 +2435,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"4"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -2490,7 +2490,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -2539,9 +2539,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -2594,7 +2594,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -2643,9 +2643,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -2698,7 +2698,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -2747,7 +2747,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"10"
 		// Magical protection.
 		"MagicalResistance"	"50"
 		// Attack
@@ -2802,7 +2802,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -2851,7 +2851,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"0"
+		"MagicalResistance"	"-5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -2904,7 +2904,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -2953,9 +2953,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -3008,7 +3008,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -3057,9 +3057,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"20"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -3112,7 +3112,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -3161,9 +3161,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -3216,7 +3216,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -3265,9 +3265,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -3320,7 +3320,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -3369,9 +3369,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -3424,7 +3424,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -3473,9 +3473,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -3483,7 +3483,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"15000"
+		"StatusHealth"	"20000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -3528,7 +3528,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -3577,9 +3577,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -3587,7 +3587,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"8000"
+		"StatusHealth"	"10000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -3632,7 +3632,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -3681,9 +3681,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"20"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -3736,7 +3736,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -3785,9 +3785,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -3840,7 +3840,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -3889,9 +3889,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -3899,7 +3899,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"10000"
+		"StatusHealth"	"11000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -3944,7 +3944,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -3993,9 +3993,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"50"
+		"MagicalResistance"	"40"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -4048,7 +4048,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -4097,7 +4097,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
 		"MagicalResistance"	"50"
 		// Attack
@@ -4152,7 +4152,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -4177,7 +4177,7 @@
 		// Name of sound set.
 		"SoundSet"	"Undying_Zombie"
 		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
-		"ModelScale"	"1.75"
+		"ModelScale"	"1.8"
 		"Level"	"28"
 		"IsAncient"	"0"
 		// Abilities
@@ -4201,9 +4201,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -4211,7 +4211,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"4000"
+		"StatusHealth"	"5000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -4256,7 +4256,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -4305,9 +4305,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"24"
+		"ArmorPhysical"	"30"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -4315,7 +4315,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"4900"
+		"StatusHealth"	"5500"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -4360,7 +4360,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -4409,9 +4409,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -4464,7 +4464,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -4513,7 +4513,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"8"
+		"ArmorPhysical"	"15"
 		// Magical protection.
 		"MagicalResistance"	"10"
 		// Attack
@@ -4568,7 +4568,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -4617,9 +4617,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -4672,7 +4672,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -4721,7 +4721,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"15"
 		// Magical protection.
 		"MagicalResistance"	"30"
 		// Attack
@@ -4776,7 +4776,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -4825,9 +4825,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"15"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -4880,7 +4880,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -4931,7 +4931,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"20"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -4984,7 +4984,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -5033,9 +5033,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -5043,7 +5043,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"20000"
+		"StatusHealth"	"24000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -5088,7 +5088,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -5137,9 +5137,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -5147,7 +5147,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"26000"
+		"StatusHealth"	"30000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -5192,7 +5192,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -5241,9 +5241,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"15"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -5296,7 +5296,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -5345,9 +5345,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -5400,7 +5400,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -5449,9 +5449,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -5504,7 +5504,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -5553,9 +5553,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"25"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -5608,7 +5608,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -5657,9 +5657,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -5712,7 +5712,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -5761,9 +5761,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -5816,7 +5816,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -5865,9 +5865,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -5920,7 +5920,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -5969,9 +5969,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -5979,7 +5979,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"60000"
+		"StatusHealth"	"65000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -6024,7 +6024,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -6073,9 +6073,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -6083,7 +6083,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"100000"
+		"StatusHealth"	"110000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -6128,7 +6128,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -6177,9 +6177,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -6232,7 +6232,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -6281,9 +6281,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -6336,7 +6336,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -6385,9 +6385,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -6440,7 +6440,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -6489,9 +6489,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"25"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -6544,7 +6544,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -6593,9 +6593,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"12"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"25"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -6648,7 +6648,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -6697,9 +6697,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -6752,7 +6752,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -6801,9 +6801,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"0"
+		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"0"
+		"MagicalResistance"	"5"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -6856,7 +6856,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -6960,7 +6960,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -7009,9 +7009,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
-		"MagicalResistance"	"40"
+		"MagicalResistance"	"20"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -7064,7 +7064,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -7113,9 +7113,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
-		"MagicalResistance"	"40"
+		"MagicalResistance"	"20"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -7168,7 +7168,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -7217,7 +7217,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
 		"MagicalResistance"	"10"
 		// Attack
@@ -7227,7 +7227,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"15000"
+		"StatusHealth"	"18000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -7272,7 +7272,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -7321,7 +7321,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
 		"MagicalResistance"	"40"
 		// Attack
@@ -7331,7 +7331,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"190000"
+		"StatusHealth"	"200000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -7376,7 +7376,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -7425,7 +7425,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
 		"MagicalResistance"	"10"
 		// Attack
@@ -7435,7 +7435,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"200000"
+		"StatusHealth"	"240000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
@@ -7480,7 +7480,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -7529,7 +7529,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
 		"MagicalResistance"	"10"
 		// Attack
@@ -7584,7 +7584,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -7633,7 +7633,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"32"
+		"ArmorPhysical"	"25"
 		// Magical protection.
 		"MagicalResistance"	"20"
 		// Attack
@@ -7688,7 +7688,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -7737,7 +7737,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
 		"MagicalResistance"	"60"
 		// Attack
@@ -7792,7 +7792,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -7841,9 +7841,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
-		"MagicalResistance"	"60"
+		"MagicalResistance"	"50"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -7896,7 +7896,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -7946,7 +7946,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
 		"MagicalResistance"	"10"
 		// Attack
@@ -8001,7 +8001,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -8051,9 +8051,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"30"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -8106,7 +8106,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -8155,9 +8155,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"32"
+		"ArmorPhysical"	"35"
 		// Magical protection.
-		"MagicalResistance"	"70"
+		"MagicalResistance"	"60"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -8210,7 +8210,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -8259,7 +8259,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"16"
+		"ArmorPhysical"	"25"
 		// Magical protection.
 		"MagicalResistance"	"20"
 		// Attack
@@ -8314,7 +8314,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -8364,7 +8364,7 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"32"
+		"ArmorPhysical"	"35"
 		// Magical protection.
 		"MagicalResistance"	"100"
 		// Attack
@@ -8419,7 +8419,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -8524,7 +8524,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -8629,7 +8629,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -8733,7 +8733,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -8784,7 +8784,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"99999"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -8837,7 +8837,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -8888,7 +8888,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"20"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -8941,7 +8941,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -8992,7 +8992,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -9045,7 +9045,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -9096,7 +9096,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -9149,7 +9149,7 @@
 		// Range of vision during day light.
 		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"1000"
+		"VisionNighttimeRange"	"0"
 		"MinimapIcon"	"minimap_candybucket"
 		"MinimapIconSize"	"768"
 		"Ability9"	""
@@ -9215,7 +9215,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -9291,9 +9291,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -9324,7 +9324,7 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creature"
 		// Model.
-		"Model"	"models/items/furion/treant/hallowed_horde/hallowed_horde.vmdl"
+		"Model"	"models/items/furion/treant/treant_cis/treant_cis.vmdl"
 		// "Model"	"models/props_tree/tree_oak_00.vmdl"
 		// "Model"	"models/items/furion/treant/hallowed_horde/hallowed_horde.vmdl"
 		// Name of sound set.
@@ -9332,7 +9332,7 @@
 		"MinimapIcon"	"minimap_creep"
 		"MinimapIconSize"	"256"
 		"Level"	"0"
-		"ModelScale"	"1.3"
+		"ModelScale"	"1.2"
 		// Abilities
 		// ----------------------------------------------------------------
 		// Ability 1.
@@ -9356,7 +9356,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -9432,9 +9432,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -9484,7 +9484,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -9561,9 +9561,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -9613,7 +9613,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -9690,9 +9690,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -9742,7 +9742,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -9819,9 +9819,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -9872,7 +9872,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -9949,9 +9949,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -10002,7 +10002,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -10079,9 +10079,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -10132,7 +10132,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -10209,9 +10209,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -10262,7 +10262,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -10339,7 +10339,7 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"600"
 		// Range of vision at night time.
 		"VisionNighttimeRange"	"600"
 		"Ability9"	""
@@ -10391,7 +10391,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -10468,9 +10468,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -10520,7 +10520,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -10597,9 +10597,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -10649,7 +10649,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -10726,9 +10726,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -10779,7 +10779,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -10856,9 +10856,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -10909,7 +10909,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -10986,9 +10986,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -11039,7 +11039,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -11116,9 +11116,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -11169,7 +11169,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -11246,9 +11246,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -11299,7 +11299,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -11374,9 +11374,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -11427,7 +11427,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -11504,9 +11504,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"700"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"700"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -11556,7 +11556,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -11633,9 +11633,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -11685,7 +11685,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -11762,9 +11762,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -11814,7 +11814,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -11891,9 +11891,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -11944,7 +11944,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -12021,9 +12021,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -12074,7 +12074,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -12151,9 +12151,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -12204,7 +12204,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -12281,9 +12281,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -12334,7 +12334,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -12411,9 +12411,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -12464,7 +12464,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -12541,9 +12541,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"800"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"800"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -12593,7 +12593,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -12670,9 +12670,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -12722,7 +12722,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -12799,9 +12799,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -12851,7 +12851,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -12928,9 +12928,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -12981,7 +12981,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -13058,9 +13058,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -13111,7 +13111,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -13188,9 +13188,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -13241,7 +13241,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -13318,9 +13318,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -13371,7 +13371,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -13448,9 +13448,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -13501,7 +13501,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -13578,9 +13578,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"900"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -13630,7 +13630,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -13707,9 +13707,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -13759,7 +13759,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -13836,9 +13836,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -13888,7 +13888,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -13965,9 +13965,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -14018,7 +14018,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -14095,9 +14095,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -14148,7 +14148,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -14225,9 +14225,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -14278,7 +14278,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -14355,9 +14355,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -14408,7 +14408,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -14485,9 +14485,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -14538,7 +14538,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -14615,9 +14615,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"1000"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -14667,7 +14667,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -14744,9 +14744,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -14796,7 +14796,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -14873,9 +14873,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -14925,7 +14925,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -15002,9 +15002,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -15055,7 +15055,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -15132,9 +15132,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -15185,7 +15185,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -15262,9 +15262,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -15315,7 +15315,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -15392,9 +15392,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -15445,7 +15445,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -15522,9 +15522,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -15575,7 +15575,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -15652,9 +15652,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"1000"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -15705,7 +15705,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -15782,9 +15782,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"e10007"
 		"Ability10"	""
 		"Ability11"	""
@@ -15841,7 +15841,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -15917,9 +15917,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -15969,7 +15969,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -16046,9 +16046,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -16098,7 +16098,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -16175,9 +16175,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -16227,7 +16227,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -16304,9 +16304,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -16356,7 +16356,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -16433,9 +16433,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -16485,7 +16485,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -16561,9 +16561,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -16613,7 +16613,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -16689,9 +16689,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -16741,7 +16741,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -16818,9 +16818,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -16870,7 +16870,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -16947,9 +16947,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -16999,7 +16999,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -17076,9 +17076,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -17128,7 +17128,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -17205,9 +17205,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -17257,7 +17257,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -17334,9 +17334,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -17386,7 +17386,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -17463,9 +17463,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"tower_attack4"
 		"Ability10"	""
 		"Ability11"	""
@@ -17515,7 +17515,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -17592,9 +17592,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -17645,7 +17645,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -17722,9 +17722,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -17775,7 +17775,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -17852,9 +17852,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -17904,7 +17904,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -17981,9 +17981,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -18033,7 +18033,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -18110,9 +18110,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -18162,7 +18162,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -18239,9 +18239,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"1000"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -18291,7 +18291,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -18368,9 +18368,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"tower_chenmoguanghuan"
 		"Ability10"	""
 		"Ability11"	""
@@ -18420,7 +18420,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -18497,9 +18497,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -18549,7 +18549,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -18626,9 +18626,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"tower_attack4"
 		"Ability10"	""
 		"Ability11"	""
@@ -18678,7 +18678,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -18755,9 +18755,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -18797,7 +18797,7 @@
 		// Ability 5.
 		"Ability5"	""
 		// Ability 6 - Extra.
-		"Ability6"	"tower_jianshe4"
+		"Ability6"	"tower_jianshe3"
 		// Ability 7 - Extra.
 		"Ability7"	"tower_baoji1"
 		// Ability 8 - Extra.
@@ -18807,7 +18807,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -18884,9 +18884,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"tower_slow3"
 		"Ability10"	""
 		"Ability11"	""
@@ -18936,7 +18936,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -19013,9 +19013,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -19065,7 +19065,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -19142,9 +19142,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -19194,7 +19194,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -19271,9 +19271,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -19323,7 +19323,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -19400,9 +19400,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"tower_attack4"
 		"Ability10"	""
 		"Ability11"	""
@@ -19454,7 +19454,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -19531,9 +19531,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"1000"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"1000"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -19585,14 +19585,14 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
 		// Damage range min.
-		"AttackDamageMin"	"1"
+		"AttackDamageMin"	"512"
 		// Damage range max.
-		"AttackDamageMax"	"1"
+		"AttackDamageMax"	"512"
 		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
 		// Speed of attack.
 		"AttackRate"	"0.7"
@@ -19662,9 +19662,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -19715,7 +19715,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -19791,9 +19791,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"e10010"
 		"Ability10"	""
 		"Ability11"	""
@@ -19843,7 +19843,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -19920,9 +19920,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"e10011"
 		"Ability10"	"tower_attack6"
 		"Ability11"	""
@@ -19973,7 +19973,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -20050,9 +20050,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"e10012"
 		"Ability10"	"tower_attack5"
 		"Ability11"	""
@@ -20103,7 +20103,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -20180,9 +20180,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -20232,7 +20232,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -20308,9 +20308,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"tower_attack6"
 		"Ability10"	""
 		"Ability11"	""
@@ -20361,7 +20361,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -20438,9 +20438,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -20492,7 +20492,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -20569,9 +20569,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -20623,7 +20623,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -20700,9 +20700,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -20754,7 +20754,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -20831,9 +20831,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"tower_attack4"
 		"Ability10"	""
 		"Ability11"	""
@@ -20882,7 +20882,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -20959,9 +20959,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -21008,7 +21008,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -21085,9 +21085,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -21124,7 +21124,7 @@
 		// Ability 5.
 		"Ability5"	"tower_slow3"
 		// Ability 6 - Extra.
-		"Ability6"	"tower_jianshe5"
+		"Ability6"	"tower_jianshe4"
 		// Ability 7 - Extra.
 		"Ability7"	"tower_baoji1"
 		// Ability 8 - Extra.
@@ -21134,7 +21134,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -21211,9 +21211,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"tower_jianjia6"
 		"Ability10"	"e301"
 		"Ability11"	""
@@ -21261,7 +21261,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -21338,9 +21338,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"e10003"
 		"Ability10"	""
 		"Ability11"	""
@@ -21388,7 +21388,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -21465,9 +21465,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"tower_du6"
 		"Ability10"	"e10002"
 		"Ability11"	""
@@ -21515,7 +21515,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -21592,9 +21592,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	"e10001"
 		"Ability10"	""
 		"Ability11"	""
@@ -21604,137 +21604,6 @@
 		"Ability15"	""
 		"Ability16"	""
 		"Skin"	"1"
-	}
-
-	// =================================================================================
-	// 斯里兰卡之星
-	// =================================================================================
-	"gemtd_diaofengzhishi"
-	{
-		// General
-		//
-		// Class of entity of link to.
-		"BaseClass"	"npc_dota_creature"
-		// Model.
-		"Model"	"models/items/wards/sylph_ward/sylph_ward.vmdl"
-		"ModelScale"	"2.2"
-		// Name of sound set.
-		"SoundSet"	"Hero_Lina"
-		"MinimapIcon"	"minimap_creep"
-		"MinimapIconSize"	"256"
-		"Level"	"9"
-		"skin"	"0"
-		// Abilities
-		// ----------------------------------------------------------------
-		// Ability 1.
-		"Ability1"	""
-		// Ability 2.
-		"Ability2"	""
-		// Ability 3.
-		"Ability3"	""
-		// Ability 4.
-		"Ability4"	""
-		// Ability 5.
-		"Ability5"	""
-		// Ability 6 - Extra.
-		"Ability6"	""
-		// Ability 7 - Extra.
-		"Ability7"	""
-		// Ability 8 - Extra.
-		"Ability8"	""
-		// Armor
-		// ----------------------------------------------------------------
-		// Physical protection.
-		"ArmorPhysical"	"10"
-		// Magical protection.
-		"MagicalResistance"	"10"
-		// Attack
-		// ----------------------------------------------------------------
-		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
-		// Damage range min.
-		"AttackDamageMin"	"300"
-		// Damage range max.
-		"AttackDamageMax"	"300"
-		"AttackDamageType"	"DAMAGE_TYPE_ArmorPhysical"
-		// Speed of attack.
-		"AttackRate"	"1"
-		// Normalized time in animation cycle to attack.
-		"AttackAnimationPoint"	"0"
-		// Range within a target can be acquired.
-		"AttackAcquisitionRange"	"1200"
-		// Range within a target can be attacked.
-		"AttackRange"	"600"
-		"ProjectileModel"	"particles/items2_fx/skadi_projectile.vpcf"
-		// Speed of projectile.
-		"ProjectileSpeed"	"3000"
-		// Attributes
-		// ----------------------------------------------------------------
-		"AttributePrimary"	"DOTA_ATTRIBUTE_STRENGTH"
-		// Base strength
-		"AttributeBaseStrength"	"0"
-		// Strength bonus per level.
-		"AttributeStrengthGain"	"0"
-		// Base intelligence
-		"AttributeBaseIntelligence"	"0"
-		// Intelligence bonus per level.
-		"AttributeIntelligenceGain"	"0"
-		// Base agility
-		"AttributeBaseAgility"	"0"
-		// Agility bonus per level.
-		"AttributeAgilityGain"	"0"
-		// Bounty
-		// ----------------------------------------------------------------
-		// Experience earn.
-		"BountyXP"	"25"
-		// Gold earned min.
-		"BountyGoldMin"	"102"
-		// Gold earned max.
-		"BountyGoldMax"	"120"
-		// Bounds
-		// ----------------------------------------------------------------
-		// Hull type used for navigation/locomotion.
-		"BoundsHullName"	"DOTA_HULL_SIZE_FILLER"
-		"RingRadius"	"80"
-		"HealthBarOffset"	"260"
-		// Movement
-		// ----------------------------------------------------------------
-		// Type of locomotion - ground, air
-		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_NONE"
-		// Speed
-		"MovementSpeed"	"0"
-		// Turning rate.
-		"MovementTurnRate"	"10"
-		// Status
-		// ----------------------------------------------------------------
-		// Base health.
-		"StatusHealth"	"1"
-		// Health regeneration rate.
-		"StatusHealthRegen"	"0"
-		// Base mana.
-		"StatusMana"	"0"
-		// Mana regeneration rate.
-		"StatusManaRegen"	"0"
-		// Team
-		// ----------------------------------------------------------------
-		// Team name.
-		"TeamName"	"DOTA_TEAM_GOODGUYS"
-		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
-		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
-		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-		// Vision
-		// ----------------------------------------------------------------
-		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
-		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
-		"Ability9"	""
-		"Ability10"	""
-		"Ability11"	""
-		"Ability12"	""
-		"Ability13"	""
-		"Ability14"	""
-		"Ability15"	""
-		"Ability16"	""
 	}
 
 	// =================================================================================
@@ -21776,7 +21645,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -21853,9 +21722,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -21907,7 +21776,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -21984,9 +21853,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -22039,7 +21908,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -22116,9 +21985,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -22171,7 +22040,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -22248,9 +22117,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -22303,7 +22172,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -22380,9 +22249,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -22435,7 +22304,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -22512,9 +22381,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -22567,7 +22436,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -22644,9 +22513,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -22699,7 +22568,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -22776,9 +22645,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -22831,7 +22700,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -22908,9 +22777,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -22963,7 +22832,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -23040,9 +22909,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -23095,7 +22964,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -23172,9 +23041,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -23227,7 +23096,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -23304,9 +23173,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -23359,7 +23228,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -23436,9 +23305,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -23491,7 +23360,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -23568,9 +23437,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -23623,7 +23492,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -23700,9 +23569,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -23755,7 +23624,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -23832,9 +23701,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -23887,7 +23756,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -23964,9 +23833,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -24019,7 +23888,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -24096,9 +23965,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -24151,7 +24020,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -24228,9 +24097,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -24283,7 +24152,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -24360,9 +24229,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -24415,7 +24284,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -24492,9 +24361,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -24547,7 +24416,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -24624,9 +24493,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -24679,7 +24548,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -24756,9 +24625,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -24811,7 +24680,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -24888,9 +24757,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -24943,7 +24812,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"10"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -25020,9 +24889,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
@@ -25070,7 +24939,7 @@
 		// Physical protection.
 		"ArmorPhysical"	"0"
 		// Magical protection.
-		"MagicalResistance"	"10"
+		"MagicalResistance"	"0"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
@@ -25147,9 +25016,9 @@
 		// Vision
 		// ----------------------------------------------------------------
 		// Range of vision during day light.
-		"VisionDaytimeRange"	"900"
+		"VisionDaytimeRange"	"0"
 		// Range of vision at night time.
-		"VisionNighttimeRange"	"600"
+		"VisionNighttimeRange"	"0"
 		"Ability9"	""
 		"Ability10"	""
 		"Ability11"	""
