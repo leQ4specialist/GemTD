@@ -475,7 +475,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"precache"
 		{
-			"particle"	"particles/units/heroes/hero_witchdoctor/witchdoctor_dust_hit.vpcf"
+			"particle"	"particles/dev/library/base_dust_hit_shockwave.vpcf"
 		}
 		"Modifiers"
 		{
@@ -483,7 +483,7 @@
 			{
 				"Passive"	"1"
 				"IsHidden"	"1"
-				"EffectName"	"particles/units/heroes/hero_witchdoctor/witchdoctor_dust_hit.vpcf"
+				"EffectName"	"particles/dev/library/base_dust_hit_shockwave.vpcf"
 				"EffectAttachType"	"follow_origin"
 				"States"
 				{
@@ -2898,6 +2898,7 @@
 				"Aura_Types"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING | DOTA_UNIT_TARGET_BASIC"
 				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 				"IsBuff"	"1"
+				"TextureName"	"beastmaster_inner_beast"
 			}
 			"modifier_inner_beast1_buff"
 			{
@@ -2908,6 +2909,7 @@
 				}
 				"IsBuff"	"1"
 				"IsPurgable"	"1"
+				"TextureName"	"beastmaster_inner_beast"
 			}
 		}
 	}
@@ -2935,6 +2937,7 @@
 				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 				"IsBuff"	"1"
 				"IsPurgable"	"0"
+				"TextureName"	"beastmaster_inner_beast"
 			}
 			"modifier_inner_beast2_buff"
 			{
@@ -2945,6 +2948,7 @@
 				}
 				"IsBuff"	"1"
 				"IsPurgable"	"1"
+				"TextureName"	"beastmaster_inner_beast"
 			}
 		}
 	}
@@ -2971,6 +2975,7 @@
 				"Aura_Types"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING | DOTA_UNIT_TARGET_BASIC"
 				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 				"IsBuff"	"1"
+				"TextureName"	"beastmaster_inner_beast"
 			}
 			"modifier_inner_beast3_buff"
 			{
@@ -2979,6 +2984,7 @@
 				{
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"40"
 				}
+				"TextureName"	"beastmaster_inner_beast"
 			}
 		}
 	}
@@ -3005,6 +3011,7 @@
 				"Aura_Types"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING | DOTA_UNIT_TARGET_BASIC"
 				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 				"IsBuff"	"1"
+				"TextureName"	"beastmaster_inner_beast"
 			}
 			"modifier_inner_beast4_buff"
 			{
@@ -3013,6 +3020,7 @@
 				{
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"50"
 				}
+				"TextureName"	"beastmaster_inner_beast"
 			}
 		}
 	}
@@ -3039,6 +3047,7 @@
 				"Aura_Types"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING | DOTA_UNIT_TARGET_BASIC"
 				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 				"IsBuff"	"1"
+				"TextureName"	"beastmaster_inner_beast"
 			}
 			"modifier_inner_beast5_buff"
 			{
@@ -3047,6 +3056,7 @@
 				{
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"60"
 				}
+				"TextureName"	"beastmaster_inner_beast"
 			}
 		}
 	}
@@ -3073,6 +3083,7 @@
 				"Aura_Types"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING | DOTA_UNIT_TARGET_BASIC"
 				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 				"IsBuff"	"1"
+				"TextureName"	"beastmaster_inner_beast"
 			}
 			"modifier_inner_beast6_buff"
 			{
@@ -3081,6 +3092,7 @@
 				{
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"70"
 				}
+				"TextureName"	"beastmaster_inner_beast"
 			}
 		}
 	}
@@ -3365,6 +3377,15 @@
 						"Damage"	"%attack_damage"
 					}
 				}
+			}
+			"modifier_tower_ranjin_debuff"
+			{
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-5"
+				}
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"	"1"
 			}
 		}
 	}
@@ -4315,13 +4336,13 @@
 				"IsHidden"	"1"
 				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Duration"	"1"
-				"ThinkInterval"	"0.5"
+				"ThinkInterval"	"0.25"
 				"OnIntervalThink"
 				{
 					"Damage"
 					{
 						"Type"	"DAMAGE_TYPE_MAGICAL"
-						"Damage"	"30"
+						"Damage"	"15"
 						"Target"	"TARGET"
 					}
 					"AttachEffect"
@@ -4421,7 +4442,7 @@
 					"Damage"
 					{
 						"Type"	"DAMAGE_TYPE_MAGICAL"
-						"Damage"	"3500"
+						"Damage"	"3000"
 						"Target"	"TARGET"
 					}
 					"AttachEffect"
@@ -4538,7 +4559,7 @@
 				{
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"-10"
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"-250"
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-50"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-40"
 				}
 			}
 		}
@@ -4576,9 +4597,9 @@
 				"EffectAttachType"	"follow_overhead"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"-50"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"-30"
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"-500"
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-50"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-80"
 				}
 			}
 		}
@@ -4651,6 +4672,7 @@
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"-30"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-10"
 				}
 			}
 		}
@@ -4774,7 +4796,7 @@
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"crystal_maiden_frostbite_immortal"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityCastRange"	"556"
+		"AbilityCastRange"	"800"
 		"precache"
 		{
 			"particle"	"particles/econ/items/crystal_maiden/ti7_immortal_shoulder/cm_ti7_immortal_frostbite.vpcf"
@@ -4786,7 +4808,7 @@
 				"Passive"	"1"
 				"IsHidden"	"1"
 				"Aura"	"modifier_tower_lanbaoshi2_buff"
-				"Aura_Radius"	"556"
+				"Aura_Radius"	"800"
 				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
 				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
@@ -4797,7 +4819,7 @@
 				"EffectAttachType"	"follow_origin"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"-75"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"-80"
 				}
 			}
 		}
@@ -5030,7 +5052,7 @@
 				"Properties"
 				{
 					// 攻击百分比加成
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"50"
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"30"
 				}
 			}
 		}
@@ -5200,389 +5222,357 @@
 		}
 	}
 
-	"tower_mofa1"
+	"tower_mvp1"
 	{
 		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"alpha_wolf_critical_strike"
+		"AbilityTextureName"	"custom/zhuazi1"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"MaxLevel"	"1"
-		"AbilityCastRange"	"600"
-		"Modifiers"
-		{
-			"modifier_mofa_aura1"
-			{
-				"Passive"	"1"
-				"IsHidden"	"0"
-				"Aura"	"modifier_mofa_buff1"
-				"Aura_Radius"	"600"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"10"
-				}
-				"TextureName"	"alpha_wolf_critical_strike"
-			}
-			"modifier_mofa_buff1"
-			{
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-8"
-				}
-			}
-		}
-	}
-
-	"tower_mofa2"
-	{
-		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"alpha_wolf_critical_strike"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"MaxLevel"	"2"
-		"AbilityCastRange"	"600"
-		"Modifiers"
-		{
-			"modifier_mofa_aura2"
-			{
-				"Passive"	"1"
-				"IsHidden"	"0"
-				"Aura"	"modifier_mofa_buff2"
-				"Aura_Radius"	"600"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"20"
-				}
-				"TextureName"	"alpha_wolf_critical_strike"
-			}
-			"modifier_mofa_buff2"
-			{
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-15"
-				}
-			}
-		}
-	}
-
-	"tower_mofa3"
-	{
-		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"alpha_wolf_critical_strike"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"MaxLevel"	"3"
-		"AbilityCastRange"	"600"
-		"Modifiers"
-		{
-			"modifier_mofa_aura3"
-			{
-				"Passive"	"1"
-				"IsHidden"	"0"
-				"Aura"	"modifier_mofa_buff3"
-				"Aura_Radius"	"600"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"30"
-				}
-				"TextureName"	"alpha_wolf_critical_strike"
-			}
-			"modifier_mofa_buff3"
-			{
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-23"
-				}
-			}
-		}
-	}
-
-	"tower_mofa4"
-	{
-		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"alpha_wolf_critical_strike"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"MaxLevel"	"4"
-		"AbilityCastRange"	"600"
-		"Modifiers"
-		{
-			"modifier_mofa_aura4"
-			{
-				"Passive"	"1"
-				"IsHidden"	"0"
-				"Aura"	"modifier_mofa_buff4"
-				"Aura_Radius"	"600"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"40"
-				}
-				"TextureName"	"alpha_wolf_critical_strike"
-			}
-			"modifier_mofa_buff4"
-			{
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-30"
-				}
-			}
-		}
-	}
-
-	"tower_mofa5"
-	{
-		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"alpha_wolf_critical_strike"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"MaxLevel"	"5"
-		"AbilityCastRange"	"600"
-		"Modifiers"
-		{
-			"modifier_mofa_aura5"
-			{
-				"Passive"	"1"
-				"IsHidden"	"0"
-				"Aura"	"modifier_mofa_buff5"
-				"Aura_Radius"	"600"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"50"
-				}
-				"TextureName"	"alpha_wolf_critical_strike"
-			}
-			"modifier_mofa_buff5"
-			{
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-38"
-				}
-			}
-		}
-	}
-
-	"tower_mofa6"
-	{
-		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"alpha_wolf_critical_strike"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"MaxLevel"	"6"
-		"AbilityCastRange"	"600"
-		"Modifiers"
-		{
-			"modifier_mofa_aura6"
-			{
-				"Passive"	"1"
-				"IsHidden"	"0"
-				"Aura"	"modifier_mofa_buff6"
-				"Aura_Radius"	"600"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"60"
-				}
-				"TextureName"	"alpha_wolf_critical_strike"
-			}
-			"modifier_mofa_buff6"
-			{
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-45"
-				}
-			}
-		}
-	}
-
-	"tower_mofa7"
-	{
-		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"alpha_wolf_critical_strike"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"MaxLevel"	"7"
-		"AbilityCastRange"	"600"
-		"Modifiers"
-		{
-			"modifier_mofa_aura7"
-			{
-				"Passive"	"1"
-				"IsHidden"	"0"
-				"Aura"	"modifier_mofa_buff7"
-				"Aura_Radius"	"600"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"70"
-				}
-				"TextureName"	"alpha_wolf_critical_strike"
-			}
-			"modifier_mofa_buff7"
-			{
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-53"
-				}
-			}
-		}
-	}
-
-	"tower_mofa8"
-	{
-		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"alpha_wolf_critical_strike"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"MaxLevel"	"8"
-		"AbilityCastRange"	"600"
-		"Modifiers"
-		{
-			"modifier_mofa_aura8"
-			{
-				"Passive"	"1"
-				"IsHidden"	"0"
-				"Aura"	"modifier_mofa_buff8"
-				"Aura_Radius"	"600"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"80"
-				}
-				"TextureName"	"alpha_wolf_critical_strike"
-			}
-			"modifier_mofa_buff8"
-			{
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-60"
-				}
-			}
-		}
-	}
-
-	"tower_mofa9"
-	{
-		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"alpha_wolf_critical_strike"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"MaxLevel"	"9"
-		"AbilityCastRange"	"600"
-		"Modifiers"
-		{
-			"modifier_mofa_aura9"
-			{
-				"Passive"	"1"
-				"IsHidden"	"0"
-				"Aura"	"modifier_mofa_buff9"
-				"Aura_Radius"	"600"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"90"
-				}
-				"TextureName"	"alpha_wolf_critical_strike"
-			}
-			"modifier_mofa_buff9"
-			{
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-68"
-				}
-			}
-		}
-	}
-
-	"tower_mofa10"
-	{
-		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"alpha_wolf_critical_strike"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"MaxLevel"	"10"
-		"AbilityCastRange"	"900"
+		"AbilityCastRange"	"%radius"
+		"Modifiers"
+		{
+			"modifier_mvp1"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"	{}
+				"TextureName"	"ursa_fury_swipes"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
+			}
+		}
+	}
+
+	"tower_mvp2"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"custom/zhuazi2"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"AbilityCastRange"	"%radius"
+		"Modifiers"
+		{
+			"modifier_mvp2"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"	{}
+				"TextureName"	"ursa_fury_swipes"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
+			}
+		}
+	}
+
+	"tower_mvp3"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"custom/zhuazi3"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"AbilityCastRange"	"%radius"
+		"Modifiers"
+		{
+			"modifier_mvp3"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"	{}
+				"TextureName"	"ursa_fury_swipes"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
+			}
+		}
+	}
+
+	"tower_mvp4"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"custom/zhuazi4"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"AbilityCastRange"	"%radius"
+		"Modifiers"
+		{
+			"modifier_mvp4"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"	{}
+				"TextureName"	"ursa_fury_swipes"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
+			}
+		}
+	}
+
+	"tower_mvp5"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"custom/zhuazi5"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"AbilityCastRange"	"%radius"
+		"Modifiers"
+		{
+			"modifier_mvp5"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"	{}
+				"TextureName"	"ursa_fury_swipes"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
+			}
+		}
+	}
+
+	"tower_mvp6"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"custom/zhuazi6"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"AbilityCastRange"	"%radius"
+		"Modifiers"
+		{
+			"modifier_mvp6"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"	{}
+				"TextureName"	"ursa_fury_swipes"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
+			}
+		}
+	}
+
+	"tower_mvp7"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"custom/zhuazi7"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"AbilityCastRange"	"%radius"
+		"Modifiers"
+		{
+			"modifier_mvp7"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"	{}
+				"TextureName"	"ursa_fury_swipes"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
+			}
+		}
+	}
+
+	"tower_mvp8"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"custom/zhuazi8"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"AbilityCastRange"	"%radius"
+		"Modifiers"
+		{
+			"modifier_mvp8"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"	{}
+				"TextureName"	"ursa_fury_swipes"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
+			}
+		}
+	}
+
+	"tower_mvp9"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"custom/zhuazi9"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"AbilityCastRange"	"%radius"
+		"Modifiers"
+		{
+			"modifier_mvp9"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"	{}
+				"TextureName"	"ursa_fury_swipes"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
+			}
+		}
+	}
+
+	"tower_mvp10"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"custom/zhuaziMAX"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"AbilityCastRange"	"285"
 		"precache"
 		{
-			"particle"	"particles/units/heroes/hero_ursa/ursa_fury_swipes_debuff.vpcf"
+			"particle"	"effect/mvp/mvp_max.vpcf"
 		}
 		"Modifiers"
 		{
-			"modifier_mofa_aura10"
-			{
-				"Passive"	"1"
-				"IsHidden"	"0"
-				"Aura"	"modifier_mofa_buff10"
-				"Aura_Radius"	"900"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"TextureName"	"alpha_wolf_critical_strike"
-			}
-			"modifier_mofa_buff10"
-			{
-				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"-75"
-				}
-				"TextureName"	"skywrath_mage_ancient_seal"
-			}
-			"modifier_tower_gongji10_aura"
+			"modifier_mvp10"
 			{
 				"Passive"	"1"
 				"IsHidden"	"1"
-				"EffectName"	"particles/units/heroes/hero_ursa/ursa_fury_swipes_debuff.vpcf"
-				"EffectAttachType"	"follow_overhead"
 				"Properties"	{}
+				"TextureName"	"ursa_fury_swipes"
+				"Aura"	"modifier_mvp_aura_friend"
+				"Aura_Radius"	"285"
 				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-				"Aura"	"modifier_tower_gongji10_friend"
-				"Aura_Radius"	"290"
+				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_RANGED_ONLY"
 				"Aura_ApplyToCaster"	"0"
-				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
-				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
-				"TextureName"	"skywrath_mage_ancient_seal"
-			}
-			"modifier_tower_gongji10"
-			{
-				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
-				"Properties"
+				"EffectName"	"effect/mvp/mvp_max.vpcf"
+				"EffectAttachType"	"follow_overhead"
+				"OnCreated"
 				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"100"
+					"RunScript"
+					{
+						"Target"	"UNIT"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
 				}
-				"Passive"	"1"
-				"TextureName"	"skywrath_mage_ancient_seal"
+			}
+			"modifier_mvp_aura_friend"
+			{
+				"Passive"	"0"
 				"IsHidden"	"1"
-			}
-			"modifier_tower_gongji10_friend"
-			{
+				"Properties"	{}
+				"TextureName"	"ursa_overpower"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"UNIT"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
 				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"Target"	"UNIT"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"UpdateMVP"
+					}
+				}
+			}
+		}
+	}
+
+	"tower_mvp_show"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"ursa_fury_swipes"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"30"
+		"AbilityCastRange"	"%radius"
+		"Modifiers"
+		{
+			"modifier_tower_mvp_cd"
+			{
+				"Passive"	"0"
+				"IsHidden"	"1"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"100"
+					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	"%cd_per"
 				}
-				"TextureName"	"skywrath_mage_ancient_seal"
+				"TextureName"	"beastmaster_primal_roar"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsBuff"	"1"
+			}
+			"modifier_tower_mvp_show"
+			{
+				"TextureName"	"ursa_fury_swipes"
+				"IsBuff"	"1"
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"cd_per"	"10"
 			}
 		}
 	}
@@ -10263,17 +10253,11 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"precache"
 		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts"
 			"particle"	"particles/units/heroes/hero_lycan/lycan_loadout.vpcf"
 			"particle"	"particles/units/heroes/hero_axe/axe_battle_hunger.vpcf"
 		}
 		"OnSpellStart"
 		{
-			"FireSound"
-			{
-				"EffectName"	"Hero_Lycan.Howl"
-				"Target"	"CASTER"
-			}
 			"FireEffect"
 			{
 				"EffectName"	"particles/units/heroes/hero_lycan/lycan_loadout.vpcf"
@@ -10325,13 +10309,13 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"unit_bonus_damage"	"20 30 40 50"
+				"unit_bonus_damage"	"10 15 20 25"
 			}
 			// Extra
 			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"aura_radius"	"256"
+				"aura_radius"	"384"
 			}
 			"04"
 			{
@@ -10424,13 +10408,13 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"unit_bonus_damage"	"60 90 120 150"
+				"unit_bonus_damage"	"30 45 60 75"
 			}
 			// Extra
 			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"aura_radius"	"384"
+				"aura_radius"	"512"
 			}
 			"04"
 			{
@@ -10523,13 +10507,13 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"unit_bonus_damage"	"180 270 360 450"
+				"unit_bonus_damage"	"90 135 180 225"
 			}
 			// Extra
 			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"aura_radius"	"512"
+				"aura_radius"	"768"
 			}
 			"04"
 			{
@@ -14705,7 +14689,7 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"xuwu_mokang_per"	"-30"
+				"xuwu_mokang_per"	"-30 -40 -50 -60"
 			}
 			"03"
 			{
@@ -14779,7 +14763,7 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"xuwu_mokang_per"	"-60"
+				"xuwu_mokang_per"	"-60 -80 -100 -120"
 			}
 			"03"
 			{
@@ -14853,7 +14837,7 @@
 			"02"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"xuwu_mokang_per"	"-90"
+				"xuwu_mokang_per"	"-90 -120 -150 -180"
 			}
 			"03"
 			{
@@ -14980,6 +14964,62 @@
 				"EffectAttachType"	"follow_overhead"
 				"TextureName"	"puck_waning_rift"
 				"Duration"	"5"
+			}
+		}
+	}
+
+	"let_jihan"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"ancient_apparition_ice_blast"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"	"4"
+		"AbilityCastPoint"	"0"
+		"AbilityCooldown"	"0"
+		"AbilityManaCost"	"0"
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"	"TARGET"
+				"ModifierName"	"modifier_let_jihan"
+				"Duration"	"%duration"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_let_jihan"
+			{
+				"TextureName"	"ancient_apparition_ice_blast"
+				"IsDebuff"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed_bonus"
+				}
+				"StatusEffectName"	"particles/status_fx/status_effect_iceblast.vpcf"
+				"StatusEffectPriority"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"attack_speed_bonus"	"-50"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"radius"	"800"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"duration"	"10 20 30 40"
 			}
 		}
 	}
@@ -15149,6 +15189,114 @@
 			{
 				"var_type"	"FIELD_INTEGER"
 				"duration"	"10 20 30 40"
+			}
+		}
+	}
+
+	"enemy_word_jihan"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"ancient_apparition_ice_blast"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
+		"Modifiers"
+		{
+			"modifier_enemy_word_jihan"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"Target"	"ATTACKER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"JiHan"
+						"radius"	"%radius"
+						"duration"	"%duration"
+					}
+				}
+			}
+			"modifier_enemy_word_jihan_debuff"
+			{
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed_bonus"
+				}
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"StatusEffectName"	"particles/status_fx/status_effect_iceblast.vpcf"
+				"Duration"	"%duration"
+				"TextureName"	"ancient_apparition_ice_blast"
+				"IsDebuff"	"1"
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"radius"	"800"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"attack_speed_bonus"	"-100"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"duration"	"10 20 30 40"
+			}
+		}
+	}
+
+	"enemy_word_anye"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"night_stalker_darkness"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
+		"Modifiers"
+		{
+			"modifier_enemy_word_heiye"
+			{
+				"Passive"	"1"
+				"IsHidden"	"0"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"AnyeBuff"
+					}
+				}
+				"ThinkInterval"	"0.1"
+				"TextureName"	"night_stalker_darkness"
+			}
+			"modifier_enemy_word_heiye_buff"
+			{
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%speed_bonus_per"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"	"%recharge_per"
+				}
+				"TextureName"	"night_stalker_darkness"
+				"IsDebuff"	"0"
+				"IsBuff"	"1"
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"speed_bonus_per"	"50"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"recharge_per"	"0.3"
 			}
 		}
 	}
@@ -15605,6 +15753,94 @@
 			{
 				"var_type"	"FIELD_INTEGER"
 				"side_angle"	"180"
+			}
+		}
+	}
+
+	"anye_debuff"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Modifiers"
+		{
+			"modifier_anye_debuff"
+			{
+				"Passive"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BONUS_NIGHT_VISION"	"-8000"
+					"MODIFIER_PROPERTY_BONUS_DAY_VISION"	"-7400"
+				}
+				"IsHidden"	"0"
+				"TextureName"	"night_stalker_darkness"
+			}
+		}
+	}
+
+	"streetlight"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"witch_doctor_death_ward"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"precache"
+		{
+			"particle"	"particles/items2_fx/ward_true_sight.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_streetlight_buff"
+			{
+				"Passive"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BONUS_NIGHT_VISION"	"600"
+					"MODIFIER_PROPERTY_BONUS_DAY_VISION"	"600"
+				}
+				"IsHidden"	"1"
+				"TextureName"	"witch_doctor_death_ward"
+				"EffectName"	"particles/items2_fx/ward_true_sight.vpcf"
+				"EffectAttachType"	"follow_overhead"
+			}
+		}
+	}
+
+	"act_idle"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Modifiers"
+		{
+			"modifier_act_victory"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"OverrideAnimation"	"ACT_DOTA_IDLE"
+				"States"
+				{
+					"MODIFIER_STATE_FROZEN"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	"show_ability"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityCastPoint"	"0.3"
+		"AbilityCastAnimation"	"ACT_DOTA_ATTACK"
+		"AbilityCooldown"	"1"
+		"AbilityManaCost"	"0"
+		"AbilityCastRange"	"100"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"	"TARGET"
+				"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+				"Function"	"ShowAbility"
 			}
 		}
 	}
