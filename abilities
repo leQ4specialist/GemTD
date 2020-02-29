@@ -3116,7 +3116,7 @@
 				"EffectAttachType"	"follow_overhead"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"240"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"200"
 				}
 			}
 		}
@@ -3348,12 +3348,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"MaxLevel"	"1"
-		// Precache
-		// -------------------------------------------------------------------------------------------------------------
-		"precache"
-		{
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
-		}
+		"AbilityCooldown"	"5"
 		"Modifiers"
 		{
 			"modifier_shaojin"
@@ -3368,11 +3363,6 @@
 						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
 						"Function"	"ranjin"
 						"Damage"	"%attack_damage"
-					}
-					"FireSound"
-					{
-						"EffectName"	"Hero_DragonKnight.ProjectileImpact"
-						"Target"	"TARGET"
 					}
 				}
 			}
@@ -4402,10 +4392,10 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"MaxLevel"	"1"
-		"AbilityCastRange"	"800"
+		"AbilityCastRange"	"1000"
 		"precache"
 		{
-			"particle"	"particles/econ/items/crystal_maiden/crystal_maiden_cowl_of_ice/maiden_crystal_nova_cowlofice.vpcf"
+			"particle"	"particles/econ/items/crystal_maiden/crystal_maiden_cowl_of_ice/maiden_crystal_nova_l_cowlofice.vpcf"
 		}
 		"Modifiers"
 		{
@@ -4414,7 +4404,7 @@
 				"Passive"	"1"
 				"IsHidden"	"1"
 				"Aura"	"modifier_tower_huiyao_buff3"
-				"Aura_Radius"	"800"
+				"Aura_Radius"	"1000"
 				"Aura_Types"	"DOTA_UNIT_TARGET_BASIC"
 				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NONE"
@@ -4425,18 +4415,18 @@
 				"IsHidden"	"1"
 				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Duration"	"1"
-				"ThinkInterval"	"4"
+				"ThinkInterval"	"2"
 				"OnIntervalThink"
 				{
 					"Damage"
 					{
 						"Type"	"DAMAGE_TYPE_MAGICAL"
-						"Damage"	"7000"
+						"Damage"	"3500"
 						"Target"	"TARGET"
 					}
 					"AttachEffect"
 					{
-						"EffectName"	"particles/econ/items/crystal_maiden/crystal_maiden_cowl_of_ice/maiden_crystal_nova_cowlofice.vpcf"
+						"EffectName"	"particles/econ/items/crystal_maiden/crystal_maiden_cowl_of_ice/maiden_crystal_nova_l_cowlofice.vpcf"
 						"EffectAttachType"	"follow_origin"
 						"Target"	"TARGET"
 					}
@@ -7792,20 +7782,20 @@
 		{
 			"01"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_reduction"		"0 0 0 0"
+				"var_type"	"FIELD_INTEGER"
+				"damage_reduction"	"0 0 0 0"
 				"LinkedSpecialBonus"	"special_bonus_unique_tidehunter_4"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_cleanse"		"80000 120000 160000 200000"
+				"var_type"	"FIELD_INTEGER"
+				"damage_cleanse"	"80000 120000 160000 200000"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_FLOAT"
+				"var_type"	"FIELD_FLOAT"
 				"damage_reset_interval"	"10"
 				"CalculateSpellDamageTooltip"	"0"
 			}
@@ -15254,25 +15244,19 @@
 			"modifier_enemy_word_xietong"
 			{
 				"Passive"	"1"
-				"IsBuff"	"0"
+				"IsBuff"	"1"
 				"TextureName"	"meepo_divided_we_stand_scavenger"
-				"Aura"	"modifier_enemy_word_xietong_buff"
-				"Aura_Radius"	"384"
-				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_BOTH"
-				"Aura_ApplyToCaster"	"1"
 				"IsHidden"	"1"
-				"Aura_Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-			}
-			"modifier_enemy_word_xietong_buff"
-			{
-				"Duration"	"1"
-				"TextureName"	"meepo_divided_we_stand_scavenger"
-				"IsHidden"	"0"
-				"Properties"
+				"OnIntervalThink"
 				{
-					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%speed_bonus"
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/addon_game_mode.lua"
+						"Function"	"NewXieTong"
+					}
 				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"ThinkInterval"	"1"
 			}
 		}
 		"AbilitySpecial"
@@ -15280,7 +15264,131 @@
 			"01"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"speed_bonus"	"200 250 300 350"
+				"speed_bonus"	"150 200 250 300"
+			}
+		}
+	}
+
+	"enemy_word_xietong_buff_1"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"meepo_divided_we_stand_scavenger"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"Modifiers"
+		{
+			"modifier_enemy_word_xietong_buff_1"
+			{
+				"Passive"	"1"
+				"IsBuff"	"1"
+				"TextureName"	"meepo_divided_we_stand_scavenger"
+				"IsHidden"	"1"
+				"ThinkInterval"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%speed_bonus"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"speed_bonus"	"150 300 450 600 750 900 1050 1200 1350 1500"
+			}
+		}
+	}
+
+	"enemy_word_xietong_buff_2"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"meepo_divided_we_stand_scavenger"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"Modifiers"
+		{
+			"modifier_enemy_word_xietong_buff_2"
+			{
+				"Passive"	"1"
+				"IsBuff"	"1"
+				"TextureName"	"meepo_divided_we_stand_scavenger"
+				"IsHidden"	"1"
+				"ThinkInterval"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%speed_bonus"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"speed_bonus"	"200 400 600 800 1000 1200 1400 1600 1800 2000"
+			}
+		}
+	}
+
+	"enemy_word_xietong_buff_3"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"meepo_divided_we_stand_scavenger"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"Modifiers"
+		{
+			"modifier_enemy_word_xietong_buff_3"
+			{
+				"Passive"	"1"
+				"IsBuff"	"1"
+				"TextureName"	"meepo_divided_we_stand_scavenger"
+				"IsHidden"	"1"
+				"ThinkInterval"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%speed_bonus"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"speed_bonus"	"250 500 750 1000 1250 1500 1750 2000 2250 2500"
+			}
+		}
+	}
+
+	"enemy_word_xietong_buff_4"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"meepo_divided_we_stand_scavenger"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"	"10"
+		"Modifiers"
+		{
+			"modifier_enemy_word_xietong_buff_4"
+			{
+				"Passive"	"1"
+				"IsBuff"	"1"
+				"TextureName"	"meepo_divided_we_stand_scavenger"
+				"IsHidden"	"1"
+				"ThinkInterval"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%speed_bonus"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"speed_bonus"	"300 600 900 1200 1500 1800 2100 2400 2700 3000"
 			}
 		}
 	}
